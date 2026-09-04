@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página em Português</title>
+    
+    <!-- Meta tags para SEO e correção de idioma -->
+    <meta name="description" content="Página de exemplo em português com correção de acentos e grafia">
+    <meta name="keywords" content="português, acentos, grafia, HTML">
+    <meta name="author" content="Seu Nome">
+    <meta http-equiv="Content-Language" content="pt-BR">
+    
+	<!-- Estilos melhorados: layout responsivo, TOC, tipografia e cartões de evento -->
+	<style>
+		:root{
+			--bg:#fbfdff;
+			--text:#222;
+			--muted:#6b7280;
+			--accent:#2b6cb0;
+			--accent-2:#1f7a9a;
+			--card:#ffffff;
+			--gap:20px;
+			--maxw:1100px;
+			--radius:10px;
+		}
+		*{box-sizing:border-box}
+		html,body{height:100%}
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+			line-height:1.65;
+			margin:0;
+			color:var(--text);
+			background:linear-gradient(180deg, #f7fbff 0%, var(--bg) 100%);
+			-webkit-font-smoothing:antialiased;
+			padding:12px;
+		}
+		.wrap{max-width:var(--maxw);margin:0 auto;padding:var(--gap)}
+		h1{margin:0;font-size:1.9rem;color:var(--accent);border-bottom:3px solid rgba(43,108,176,.12);padding-bottom:8px}
+		h2{font-size:1.25rem;margin-top:24px;margin-bottom:8px;color:#183a5a;text-align:center}
+		h3,h4{color:#1f2937;margin:0 0 8px}
+		p{margin:0 0 12px;color:var(--muted)}
+		img{max-width:100%;height:auto;display:block;border-radius:8px}
+
+		/* Layout principal */
+		.grid{display:block}
+		.section-card{background:var(--card);border:1px solid #e6eef8;border-radius:var(--radius);padding:14px;margin-bottom:16px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+		.event-card{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:8px;border:1px solid #eef6fb;background:linear-gradient(180deg,#fff,#fbfdff)}
+		.event-card .thumb{flex:0 0 90px}
+		.event-card .thumb img{width:90px;height:90px;object-fit:cover;border-radius:6px}
+		.event-card .body{flex:1}
+		.event-card .meta{font-size:0.9rem;color:var(--muted);margin-bottom:6px}
+		.event-card strong.title{display:block;color:#0f1724}
+
+		/* Navegação lateral / topo */
+		nav#toc{position:sticky;top:12px;background:transparent;padding:8px 0;margin-bottom:12px;display:flex;gap:12px;align-items:flex-start}
+		#search{flex:1;min-width:140px;padding:8px;border-radius:8px;border:1px solid #d1d5db}
+		#toc-box{background:var(--card);border:1px solid #e6eef8;border-radius:8px;padding:10px;max-height:300px;overflow:auto;width:260px}
+		#toc-box h4{margin:0 0 8px;font-size:0.95rem}
+		#toc-list{list-style:none;padding:0;margin:0;display:block}
+		#toc-list li{margin:0 0 6px}
+		#toc-list a{color:var(--accent);text-decoration:none;font-size:0.9rem}
+
+		/* Toggle button */
+		.toggle-btn{margin-left:8px;padding:6px 10px;border-radius:6px;border:1px solid #cbd5e1;background:#fff;color:var(--accent);cursor:pointer}
+
+		ul{margin:8px 0 18px;padding-left:1.1rem}
+		li{margin:6px 0}
+
+		/* Utilities */
+		.muted{color:var(--muted)}
+		a{color:var(--accent)}
+		.meta{font-size:0.95rem;color:var(--muted)}
+
+		/* Responsividade */
+		@media (min-width:900px){
+			.grid{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
+			nav#toc{flex-direction:column;align-items:flex-end}
+		}
+		@media (max-width:640px){
+			.wrap{padding:12px}
+			#toc-box{display:none}
+			nav#toc{flex-direction:row;align-items:center}
+			.event-card{flex-direction:row}
+			.event-card .thumb{flex-basis:72px}
+		}
+	</style>
+</head>
+
+
+
+
+
+
+<body>
+<div class="wrap">
+	<nav id="toc" aria-label="Navegação da página">
+		<input id="search" placeholder="Buscar programação, artista ou palavra..." aria-label="Buscar" />
+	</nav>
+
+	<main>
+
+        <h2><img class="aligncenter wp-image-7636 size-large" src="http://ppgca.uff.br/wp-content/uploads/sites/650/2026/09/Cartaz-Ocupa-SOMA-819x1024.png" alt="" width="100%" /></h2>
+&nbsp;
+<!-- <h2 style="text-align: center;">OCUPASOMA #4</h2> -->
+<p style="text-align: justify;">OcupaSoma é organizado e produzido pelo <a href="https://www.artes.uff.br/soma/"><strong>Grupo de Pesquisa SOMA (Som nas Artes)</strong></a> do PPGCA. Ele tem como proposta divulgar a produção dos artistas e pesquisadores do SOMA bem como de grupos de pesquisa parceiros. O evento acontece de<strong> 17SET a 9OUT de 2026</strong> no Instituto de Artes e Comunicação Social da Universidade Federal Fluminense IACS-UFF no Campus Gragoatá em Niterói. Nesta 4ª edição o evento contará com uma série de atividades: <strong><a href="#[e]">exposição [e]</a>, <a href="#[pa]">performance [p], ativação [a]</a>, <a href="#[ov]" >oficinas [o], vivências [v]</a> e <a href="#[s]">seminário [s] </a></strong>. A programação é gratuita e aberta ao público geral. Oficinas e vivências estão com <a href="https://forms.gle/DeqhF3j6zTmidgMGA">inscrições abertas pelo formulário online</a> até dia 15 de setembro. Mais informações siga-nos na rede <a href="https://www.instagram.com/_soma_lab/">@_soma_lab</a><a href="https://www.instagram.com/_soma_lab/">.</a> Abaixo você confere a programação completa.</p>
+
+
+
+&nbsp;
+<details class="program-details">
+	<summary>
+		<h2 style="text-align: center; margin:0">PROGRAMAÇÃO GERAL</h2>
+	</summary>
+	<div style="padding:12px 16px">
+
+    <details class="program-details">
+	<summary>
+		<h2 style="text-align: center; margin:0">17SET</h2>
+	</summary>
+	<div style="padding:12px 16px">
+		<p style="text-align: justify;"><strong>ABERTURA</strong></p>
+		<ul>
+			<li><a href="#[p1]">17h | <strong>Frescosom - Rodrigo Ramos</strong> | Jardim GAIA Galeria de Artes do IACS-UFF | <strong>[p1] performance</strong></a></li>
+			<li><a href="#[v1]">17h20 | <strong>Andarilhagem Sonora - Prólogo para a Baía - Mari Abreu</strong> | Jardim GAIA Galeria de Artes do IACS-UFF | <strong>[v1] vivência </strong></a></li>
+			<li><a href="#[p2]">17h50 | <strong>Dueto de Berimbau - João Victor Tavares da Silva, Mirian Pinto Alves dos Santos</strong> | Jardim GAIA Galeria de Artes do IACS-UFF | <strong>[p2] performance</strong></a></li>
+			<li><a href="#[a1]">18h30 | <strong>Pé-de-mar e baleia: canto e contracanto do fundo e da beira - Tato Taborda </strong> | GAIA Galeria de Artes do IACS-UFF | <strong>[a1] ativação</strong></a></li>
+			<li><a href="#[a2]">19h | <strong>algo vermelho - Be da Matta Goytaká</strong> | GAIA Galeria de Artes do IACS-UFF | <strong>[a2] ativação</strong></a></li>
+			<li><a href="#[a3]">19h10 | <strong>Escultátorio - Coletivo Ateliê entreaberto</strong> | GAIA Galeria de Artes do IACS-UFF | <strong>[a3] ativação</strong></a></li>
+		</ul>
+
+		<p style="text-align: justify;"><strong>EXPOSIÇÃO </strong> de 17SET a 9OUT na GAIA Galeria de Artes do IACS-UFF</p>
+		<ul>
+			<li><a href="#[e]"> <strong>Vassago (Pedro Ruback da Silva), suco-sulco (Raquel Stolf (org.) e equipe do Programa de Extensão Sala de leitura | Sala de escuta (DAV/PPGAV/UDESC)), Pacha (Rodrigo Ramos e OzZo Ukumari), Escultátorio (Coletivo Ateliê entreaberto), Andarilhagem Sonora - Prólogo para a Baía (Mari Abreu), RGBeat (Prütti), Gavetolão de Jangarandá (Grupo Sonoro da Casa Jangada), Pé do ouvido (Gabriel Martinho e Gabriela Serfaty), Gás Líghtíng (Coordenação Malu Hatoum e Filipe Britto), El Grito de la Tierra (Colectivo Refluxus y Pavel Shalnov), CelularCoral: Dissimulation #5 (Giuliano Obici), algo vermelho (Be da Matta Goytaká), Cantos Marinhos do Fundo e da Margem (Tato Taborda), Berimbau Luz (Giuliano Obici), Transmutasom: Processos Alquímicos (João Victor Tavares da Silva, Mirian Pinto Alves dos Santos) </strong></a></li>
+		</ul>
+	</div>
+    </details>
+
+    <details class="program-details">
+	<summary>
+	<h2 style="text-align: center; margin:0">22SET</h2>
+	</summary>
+	<div style="padding:12px 16px">
+
+    <ul>
+ 	<li><a href="#[v2]">9~13h | <strong>Experimentação Sonora com Celulares - Giuliano Obici e João Tavares</strong> | Lab Info 1 IACS-UFF | <strong>[v2] vivência</strong></a></li>
+ 	<li><a href="#[o1]">14~18h | <strong>Searching Silences - Hannah Nelsen, Anna Shpak, Lea Babel</strong> | Soma Lab IACS-UFF | <strong>[o1] oficina </strong></a></li>
+    </ul>
+    </div>
+    </details>
+
+    <details class="program-details">
+	<summary>
+    <h2 style="text-align: center; margin:0">23SET</h2>
+    </summary>
+    <div style="padding:12px 16px">
+    <ul>
+ 	<li><a href="#[s1]">10h | <strong>(IM)Corporações Femininas em Realidade Estendida: A imaginação como corporeidade digifeminista - Marcela C. Trevisan</strong> | Auditório das Pós - IACS UFF | <strong>[s1] seminário</strong></a></li>
+ 	<li><a href="#[s2]">10h30 | <strong>Chicharra Festival Nómada de Escucha: Agente de Escucha de Territorios desde una Perspectiva Ecosófica Radical - Colectivo Refluxus (Malu Hatoum, Ebe Giovannini) </strong> | Auditório das Pós - IACS UFF | <strong>[s2] seminário</strong></a></li>
+ 	<li><a href="#[s3]">11h | <strong>Arte em movimento: reflexões sobre a animação enquanto prática artística contemporânea - Rafael Costa de Melo</strong> | Auditório das Pós - IACS UFF | <strong>[s3] seminário</strong></a></li>
+ 	<li><a href="#[s4]">11h30 | <strong>Dentro do Conceito: Jogos Digitais, Ecologia do Universalimos e Mobilidade Através de Conceitos - Pedro Ruback da Silva</strong> | Auditório das Pós - IACS UFF | <strong>[s4] seminário</strong></a></li>
+ 	<li><a href="#[s5]">14h | <strong>Ondas curtas de rádio - Comunicação e escuta para além das big techs - Leo Alves Vieira</strong> | Auditório das Pós - IACS UFF | <strong>[s5] seminário</strong></a></li>
+ 	<li><a href="#[s6]">15h30 | <strong>Tactus - Cuerpos resonantes - Rodrigo Ramos</strong> | Auditório das Pós - IACS UFF | <strong>[s6] seminário</strong></a></li>
+ 	<li><a href="#[v3]">16h | <strong>Pesca atmosférica - Leo Alves Vieira</strong> | Auditório das Pós - IACS UFF | <strong>[v3] vivência</strong></a></li>
+    </ul>
+    </div>
+    </details>
+
+
+    <details class="program-details">
+	<summary>
+    <h2 style="text-align: center; margin:0">24SET</h2>
+    </summary>
+    <div style="padding:12px 16px">
+
+    <ul>
+ 	<li><a href="#[o2]">14~18h | <strong>Escuta Tátil: corpo transdutor - Rodrigo Ramos e Marcela C. Trevisan</strong> | Sala Corpo Som Luiz Mendonça IACS-UFF | <strong>[o2] oficina</strong></a></li>
+ 	<li><a href="#[p3]">17h | <strong>cold fresh air - Grigory Darman </strong> | GAIA Galeria de Artes do IACS-UFF | <strong>[p3] performance</strong></a></li>
+ 	<li><a href="#[p4]">17h40 | <strong>Tropicaliente - Zah (Izabella Lessa), Mirian Pinto Alves dos Santos e João Victor Tavares da Silva, </strong> | GAIA Galeria de Artes do IACS-UFF | <strong>[p4] performance</strong></a></li>
+    </ul>
+    </div>
+    </details>
+
+    <details class="program-details">
+	<summary>
+		<h2 style="text-align: center; margin:0">29SET</h2>
+	</summary>
+	<div style="padding:12px 16px">
+		<ul>
+			<li><a href="#[o3]">9~13h | <strong>Oficina de criação com captadores piezo - Giuliano Obici, João Tavares</strong> | Lab Info 1 IACS-UFF UFF | <strong>[o3] oficina</strong></a></li>
+			<li><a href="#[o1]">14~18h | <strong>Searching Silences - Hannah Nelsen, Anna Shpak, Lea Babel</strong> | Soma Lab IACS-UFF | <strong>#[o1] oficina</strong></a></li>
+		</ul>
+	</div>
+    </details>
+
+    <details class="program-details">
+	<summary>
+    <h2 style="text-align: center; margin:0">30SET</h2>
+    </summary>
+    <div style="padding:12px 16px">   
+
+    <ul>
+ 	<li><a href="#[s8]">10h | <strong>Fundamentos poéticos da forja e o asé do Alágbedé Ògún - João Victor Tavares da Silva</strong> | Auditório das Pós - IACS UFF | <strong>[s8] seminário</strong></a></li>
+ 	<li><a href="#[s9]">10h30 | <strong>Tecnodiversidade e Gambiarra: Perspectivas Arte Sonora - Giuliano Obici</strong> | Auditório das Pós - IACS UFF | <strong>[s9] seminário</strong></a></li>
+ 	<li><a href="#[s10]">11h | <strong>Arte, clínica y esquizoanálise - Gabriel Martinho</strong> | Auditório das Pós - IACS UFF | <strong>[s10] seminário</strong></a></li>
+ 	<li><a href="#[s11]">11h30 | <strong>Escuta e cosmopolítica em A Queda do Céu - Felippe Mussel</strong> | Auditório das Pós - IACS UFF | <strong>[s11] seminário</strong></a></li>
+ 	<li><a href="#[s12]">14h | <strong>Uma Conversa Sobre Música Experimetal - Vera Terra</strong> | Auditório das Pós - IACS UFF | <strong>[s12] seminário</strong></a></li>
+ 	<li><a href="#[s13]">15h30 | <strong>O Mar Volta a Buscar? Andarilhagem Sonora na Baía da Guanabara - Mariana de Abreu Campos</strong> | Auditório das Pós - IACS UFF | <strong>[s13] seminário</strong></a></li>
+ 	<li><a href="#[s14]">16h | <strong>Por uma cartografia sonora-afetiva de Duque de Caxias - Por uma cartografia sonora-afetiva de Duque de Caxias</strong> | Auditório das Pós - IACS UFF | <strong>[s14] seminário</strong></a></li>
+ 	<li><a href="#[s15]">16h30 | <strong>Ocupação Sonora Sem Terra - Camila Machado</strong> | Auditório das Pós - IACS UFF | <strong>[s15] seminário</strong></a></li>
+    </ul>
+    </div>
+    </details>
+
+    <details class="program-details">
+	<summary>
+    <h2 style="text-align: center; margin:0">1OUT</h2>
+    </summary> 
+    <div style="padding:12px 16px">
+    <ul>
+ 	<li><a href="#[v4]">14~16h | <strong>ECOS - Experiências de Realidade Virtual e(m) Dança - Concepção: Ivani Santana (Brasil) e Daniel Argente (Uruguai) Direção Artística: Ivani Santana (Brasil) Coordenador de Realidade Virtual: Daniel Argente (Uruguai) Direção Artística (realidade virtual) Inés Olmedo (Uruguai) MOCAP, Animação Avatares e interacción: Andrés Castro (Uruguai) Programação: Diego Strasser, Juan Goyret, Pablo Sedraschi (Uruguai) Modelagem: Mariana Rosado, Natalia Pardo (Uruguai) Sonoridade da realidade virtual: Bruno Boselli (Uruguai) Bailarinos: Camila Florentino, Clarissa Monteiro de Araújo, Gabriela Haddadi, Laura Silveira, Weber Cooper. </strong> | Sala Corpo Som Luiz Mendonça IACS-UFF | <strong>[v4] vivência</strong></a></li>
+ 	<li><a href="#[v5]">16~18h | <strong>Entre Seres - Experiências de Realidade Virtual e(m) Dança - Coordenação: Ivani Santana (Pesquisa Poéticas Tecnológicas: corpoaudiovisual / UFRJ) e Esteban Clua (MediaLab / UFF) Desenvolvedores UNITY: Gabriel Barroso, João Pedro Silva de Sá e Jean Martins do Lago Cunha Programação de áudio: Arthur Macabu Erthal Artista 3D: Maitê Zaccaro Escote. Suporte: RNP Apoio à pesquisa:CNPq e FAPERJ</strong> | Sala Corpo Som Luiz Mendonça IACS-UFF | <strong>[v5] vivência</strong></a></li>
+ 	<li><a href="#[p5]">18h | <strong>Cibermulher Vitruviana - Marcela C. Trevisan e Paul Neugebauer</strong> | GAIA Galeria de Artes do IACS-UFF | <strong>[p5] performance</strong></a></li>
+ 	<li><a href="#[p6]">18h30 | <strong>Baixada Sonora - Anne Santos e João Lourenço</strong> | GAIA Galeria de Artes do IACS-UFF | <strong>[p6] performance</strong></a></li>
+    </ul>
+	</div>
+    </details>
+
+
+    <details class="program-details">
+	<summary>
+    <h2 style="text-align: center; margin:0">6OUT</h2>
+    </summary>
+    <div style="padding:12px 16px">
+
+    <ul>
+ 	<li><a href="#[o4]">14~18h | <strong>Introdução ao desenvolvimento de games nas artes - Pedro Ruback da Silva</strong> | Lab Info 1 IACS-UFF | <strong>[o4] oficina</strong></a></li>
+    </ul>
+
+	</div>
+    </details>
+
+
+    <details class="program-details">
+	<summary>
+    <h2 style="text-align: center; margin:0">7OUT</h2>
+	</summary>
+	<div style="padding:12px 16px">
+	<ul>
+	 	<li><a href="#[o5]">14~18h | <strong>Cacarecos Sonoros e Composição Coletiva - Be da Matta Goytaká e Nubia Mobo </strong> | Soma Lab IACS-UFF | <strong>[o5] oficina</strong></a></li>
+	</ul>
+	</div>
+    </details>
+
+    <details class="program-details">
+	<summary>   
+    <h2 style="text-align: center; margin:0">8OUT</h2>
+    </summary>
+    <div style="padding:12px 16px">
+    <ul>
+ 	<li><a href="#[v6]">14h | <strong>Dança para Cibermulheres - Marcela Capitanio Trevisan</strong> | Sala Corpo Som Luiz Mendonça IACS-UFF | <strong>[v6] vivência</strong></a></li>
+ 	<li><a href="#[o6]">14~17h | <strong>Encontros e Armadilhas - Henrique Iwao</strong> | GAIA Galeria de Artes do IACS-UFF | <strong>[o6] oficina</strong></a></li>
+ 	<li><a href="#[p7]">18h | <strong>Iwao convida Outronde e Improvisatorios - Henrique Iwao, Rodrigo Girafa e Leo Alves (coord.)</strong> | Jardim GAIA Galeria de Artes do IACS-UFF | <strong>[p7] performance</strong></a></li>
+    </ul>
+    </div>
+    </details>
+
+    <details class="program-details">
+	<summary>
+    <h2 style="text-align: center; margin:0 ">10~12OUT</h2>
+    </summary>
+    <div style="padding:12px 16px">
+
+    <ul>
+ 	<li><a href="#[v7]">10h | <strong>Expedição a Reserva Biológica do Tinguá - Malu Hatoum</strong> | Reserva Biológica do Tinguá | <strong>[v7] vivência</strong></a></li>
+    </ul>
+    </div>
+    </details>
+</div>
+</details>
+
+
+<div id="[ov]"></div>
+<details class="program-details">
+	<summary>
+    <h2 style="text-align: center;margin:0;">OFICINAS &amp; VIVÊNCIAS</h2>
+    </summary>
+    <div style="padding:12px 16px"> 
+    
+        <br>
+<div id="[v1]"></div>
+<h4>[v1] Andarilhagem Sonora - Prólogo para a Baía</h4>
+<strong>17SET 17h20</strong> | Jardim GAIA Galeria de Artes do IACS-UFF | <strong>Mari Abreu</strong>
+Esta peça sonora ou audiotour pode ser um ""espetáculo para os ouvidos"", ou um ""curta para os ouvidos"". Ativando a escuta e a imaginação através de narrações fabulativas e composições, a pessoa espectadora-público é conduzida por uma caminhada tendo como site-specific a Baía de Guanabara.<a href="https://forms.gle/DeqhF3j6zTmidgMGA"> Link Inscrição</a>
+
+<div id="[v2]"></div>
+<h4>[v2] Experimentação Sonora com Celulares</h4>
+<strong>22SET 9~13h</strong> | Lab Info 1 IACS-UFF | <strong>Giuliano Obici e João Tavares</strong>
+Em uma era em que os smartphones superam a população do país, arte pode dialogar com a tecnologia que carregamos no bolso. Esta oficina convida artistas e curiosos a explorar o potencial sonoro dos dispositivos móveis, transformando-os em instrumentos coletivos interativos localmente. Durante o encontro, os participantes serão guiados explorar microfones, alto-falantes, sensores e conexões do próprio aparelho e reinventa-los como ferramentas de expressão artística. A proposta será de uma vivência coletiva, na qual os celulares conectados se transformam em um instrumento sonoro e audiovisual. <a href="https://forms.gle/DeqhF3j6zTmidgMGA"> Link Inscrição</a>
+<div id="[o1]"></div>
+<h4>[o1] Searching Silences</h4>
+<strong>22SET e 27SET 14~18h</strong> | Soma Lab IACS-UFF | <strong>Hannah Nelsen, Anna Shpak, Lea Babel</strong>
+O silêncio é algo que podemos perceber. Mas como ele se apresenta? Onde podemos encontrá-lo? Como criá-lo ativamente? E, talvez o mais importante: é possível encontrá-lo quando estamos à sua procura? O workshop explora essas questões em duas partes. Na primeira, partiremos em busca do silêncio pelo campus universitário. Quais lugares percebemos como silenciosos? O que ouvimos e como? Em sessões de 15 minutos, os locais serão explorados e documentados — sem microfones, pois seus filtros se desviam do silêncio percebido. Os participantes escolhem livremente a forma de documentação: desenho, escrita, pintura, escultura, composição musical ou outros meios. Na segunda parte, tentaremos criar ativamente o maior silêncio possível em um lugar barulhento. Quaisquer materiais, intervenções e ações são permitidos. Essas “receitas para o silêncio” também serão documentadas da maneira que cada participante escolher.<a href="https://forms.gle/DeqhF3j6zTmidgMGA"> Link Inscrição</a>
+<div id="[v3]"></div>
+<h4>[v3] Pesca atmosférica</h4>
+<strong>23SET 16h</strong> | Auditório das Pós - IACS UFF | <strong>Leo Alves Vieira</strong>
+Proposta de intervenção na paisagem sonora da orla da baia de Guanabara. Consiste em caminhadas com um certo número de rádios de pilha, cada um com um headphone e um gravador zoom para o participante experimentar a captura de sintonias de ondas curtas, escutando e gravando <a href="https://forms.gle/DeqhF3j6zTmidgMGA"> Link Inscrição</a>
+<div id="[o2]"></div>
+<h4>[o2] Escuta Tátil: corpo transdutor</h4>
+<strong>24SET 14~18h</strong> | Sala Corpo Som Luiz Mendonça IACS-UFF | <strong>Rodrigo Ramos e Marcela C. Trevisan</strong>
+“Escuta Tátil” é uma oficina prática e experimental que investiga o som além da audição convencional, propondo experiências de percepção vibrotátil por meio do corpo, dos objetos e das baixas frequências. A atividade integra participantes surdos e ouvintes em processos coletivos de criação sonora, utilizando microfones de contato piezoelétricos, transdutores táteis e exercícios de composição vibroacústica.
+A oficina parte do princípio de que o corpo funciona como uma caixa de ressonância capaz de perceber vibrações sonoras por meio da pele, dos ossos e do contato com materiais vibrantes. Inspirada em pesquisas sobre vibroacústica e escuta expandida, a atividade promove experiências sensoriais acessíveis que aproximam a arte sonora, a
+tecnologia low-tech e a percepção corporal. Serão apresentados conceitos relacionados à escuta tátil, vibração, ressonância e vibroacústica, incluindo referências à pesquisa do musicoterapeuta Anthony Wigram e da percussionista surda Evelyn Glennie, reconhecida internacionalmente por desenvolver formas de percepção sonora por meio de todo o corpo.<a href="https://forms.gle/DeqhF3j6zTmidgMGA"> Link Inscrição</a>
+<div id="[o3]"></div>
+<h4>[o3] Gambioluteria com Captador Piezo</h4>
+<strong>29SET 9~13h</strong> | Lab Info 1 IACS-UFF UFF | <strong>Giuliano Obici, João Tavares</strong>
+O microfone de contato piezoelétrico tem importante papel na história da música do século XX do pós guerra. Graças sua versatilidade e baixíssimo custo, características da gambioluteria, construção de instrumentos sonoros guiados pela lógica da gambiarrra, o piezo se popularizou no repertório da música eletrônica e experimental bem como da arte sonora. Durante a oficina os participantes conhecerão um pouco do repertório artístico que consagrou o captador piezo e aprenderão a construir seu próprio microfone de contato. Ao final os participantes serão convidados a explorar as potencialidades estéticas do captador como microfone e sensor em instalações interativas, além de poder levar para casa o microfone construído.<a href="https://forms.gle/DeqhF3j6zTmidgMGA"> Link Inscrição</a>
+<div id="[v4]"></div>
+<h4>[v4] ECOS - Experiências de Realidade Virtual e(m) Dança</h4>
+<strong>1OUT 14~16h</strong> | Sala Corpo Som Luiz Mendonça IACS-UFF | <strong>Concepção: Ivani Santana (Brasil) e Daniel Argente (Uruguai) Direção Artística: Ivani Santana (Brasil) Coordenador de Realidade Virtual: Daniel Argente (Uruguai) Direção Artística (realidade virtual) Inés Olmedo (Uruguai) MOCAP, Animação Avatares e interacción: Andrés Castro (Uruguai) Programação: Diego Strasser, Juan Goyret, Pablo Sedraschi (Uruguai) Modelagem: Mariana Rosado, Natalia Pardo (Uruguai) Sonoridade da realidade virtual: Bruno Boselli (Uruguai) Bailarinos: Camila Florentino, Clarissa Monteiro de Araújo, Gabriela Haddadi, Laura Silveira, Weber Cooper. </strong>
+ECOS é uma experiência de realidade virtual que toma o movimento do corpo como ignição para a transformação do meio e o diálogo com avatares. Ambientada em uma ecologia ficcional inspirada por mitos e rituais, a obra convida o público a percorrer dois cenários — uma caverna e uma praia — e interagir com as entidades que os habitam. A imersão guia-se pela busca de pertencimento: habitar este mundo exige ação, e cada gesto gera consequências. Inicialmente desbotada e indefinida, a paisagem ganha cor e visibilidade à medida que o público se desloca; quanto maior a interação, mais o ambiente e os avatares se revelam. Gestos cotidianos desdobram-se em dinâmicas complexas de improvisação entre corpos físicos e virtuais, fazendo ressoar as cosmopoéticas desta realidade sintética.<a href="https://forms.gle/DeqhF3j6zTmidgMGA"> Link Inscrição</a>
+<div id="[v5]"></div>
+<h4>[v5] Entre Seres - Experiências de Realidade Virtual e(m) Dança</h4>
+<strong>1OUT 16~18h</strong> | Sala Corpo Som Luiz Mendonça IACS-UFF | <strong>Coordenação: Ivani Santana (Pesquisa Poéticas Tecnológicas: corpoaudiovisual / UFRJ) e Esteban Clua (MediaLab / UFF) Desenvolvedores UNITY: Gabriel Barroso, João Pedro Silva de Sá e Jean Martins do Lago Cunha Programação de áudio: Arthur Macabu Erthal Artista 3D: Maitê Zaccaro Escote. Suporte: RNP Apoio à pesquisa:CNPq e FAPERJ</strong>
+Entre Seres é uma experiência imersiva e interativa que convida o público a navegar pelo leito de um rio encantado a bordo de uma jangada, ao encontro de entidades imaginárias da floresta. A conexão ocorre por meio de gestos e movimentos: o fluxo das águas e o acesso aos povos ribeirinhos dependem diretamente da interação do participante com esse universo virtual. A cada porto, revelam-se novas formas de diálogo com a paisagem e seus habitantes. Em apenas 8 minutos, a jornada sintetiza o ciclo de um dia inteiro, partindo da manhã ensolarada até o desabrochar de uma noite estrelada, momento em que nos despedimos desses guardiões da floresta. A obra inspira-se na cosmovisão Yanomami sobre o mundo dos sonhos — um plano paralelo ao visível, habitado por espíritos ancestrais.<a href="https://forms.gle/DeqhF3j6zTmidgMGA"> Link Inscrição</a>
+<div id="[o4]"></div>
+<h4>[o4] Introdução ao desenvolvimento de games nas artes</h4>
+<strong>6OUT 14~18h</strong> | Lab Info 1 IACS-UFF | <strong>Pedro Ruback da Silva</strong>
+Vivemos um Século Lúdico marcado por sistemas e organização de informação, cuja principal expressão são experiências artísticas moduláveis, personalizáveis e participativas. A atitude contemporânea *culture hacking* todos nos tornamos designers de jogos. Este workshop introduz pesquisadores e artistas às ferramentas de desenvolvimento de jogos digitais, focando nos conceitos e recursos fundamentais do software open-source Godot: cenas, AssetLib, addons, LimboAI, Script, iluminação (DirectionalLight3D), colisão (CollisionShape3D), MeshInstance3D, NavigationRegion3D, GridMap, Camera3D e modelagem de objetos básicos (cenário e personagem). Espera-se que o participante esteja apto a experimentar criativamente seus próprios projetos. Para participar não é necessário conhecimento prévio em desenvolvimento de jogos ou programação.<a href="https://forms.gle/DeqhF3j6zTmidgMGA"> Link Inscrição</a>
+<div id="[o5]"></div>
+<h4>[o5] Cacarecos Sonoros e Composição Coletiva</h4>
+<strong>7OUT 14~18h</strong> | Soma Lab IACS-UFF | <strong>Be da Matta Goytaká e Nubia Mobo</strong>
+A oficina propõe uma investigação artística sobre escuta, materiais cotidianos e objetos descartados como disparadores para a criação de esculturas sonoras, instrumentos experimentais e composições coletivas. A partir de exercícios de percepção do entorno, os participantes exploram diferentes materialidades — industriais, naturais e descartadas — observando suas propriedades táteis, sonoras, visuais e simbólicas. O processo envolve coleta, experimentação, construção e composição, entendendo a gambiarra como prática inventiva, política e poética, e não apenas improviso técnico. Serão apresentados artistas e obras fundamentais da arte sonora e de práticas experimentais, com referências brasileiras, latino-americanas, africanas, indígenas e de perspectivas dissidentes, ampliando o repertório para além das narrativas hegemônicas. O percurso culmina na criação coletiva de uma composição sonora com os objetos produzidos.<a href="https://forms.gle/DeqhF3j6zTmidgMGA"> Link Inscrição</a>
+<div id="[v6]"></div>
+<h4>[v6] Dança para Cibermulheres</h4>
+<strong>8OUT 14h</strong> | Sala Corpo Som Luiz Mendonça IACS-UFF | <strong>Marcela Capitanio Trevisan</strong>
+Dança para Cibermulheres é uma vivência para mulheres que une dança, expressão corporal e tecnologia. Usaremos o aplicativo MobMuPlat, que transforma sensores do celular em disparadores sonoros. Cada participante deve trazer seu próprio celular e carregador. Começamos com uma prática de consciência corporal para sensibilizar o corpo. Em seguida, apresento o app e seu funcionamento, orientando a instalação e o uso de uma pasta com sons que remetem a qualidades de movimento ligadas a tecidos e órgãos dos corpos femininos (inspirados em Alban Bartenieff e associações metafóricas): sons de água, metal e outros. Os celulares serão acoplados ao corpo com braçadeiras que disponibilizo. Depois, entramos em uma dinâmica de perguntas e respostas inspirada em Pina Bausch, com os aparelhos já no corpo. A partir daí, cada uma experimenta movimentos próprios, ativando sons pelos sensores. Assim, os corpos das mulheres se tornam corpos ciber, prontos para reinvenções de si mesmas.<a href="https://forms.gle/DeqhF3j6zTmidgMGA"> Link Inscrição</a>
+<div id="[o6]"></div>
+<h4>[o6] Encontros e Armadilhas</h4>
+<strong>8OUT 14~17h</strong> | GAIA Galeria de Artes do IACS-UFF | <strong>Henrique Iwao </strong>
+Começaremos com um jogo musical em que os participantes exercitam chamar turnos e assim coordenar os momentos em que o grupo inicia ou termina de tocar. Esse jogo (""O homem com o dedo no nariz"") envolve tocar sons longos e tentar participar de maiores, a fim de vencer. Aos poucos, flexibilizaremos elementos, dando maior espaço para improvisação, sem perder de vista a utilização das dicas visuais que permitem articular encontros, mas também, armadilhas. <a href="https://forms.gle/DeqhF3j6zTmidgMGA"> Link Inscrição</a>
+<div id="[v7]"></div>
+<h4>[v7] Expedição a Reserva Biológica do Tinguá</h4>
+<strong>10~12OUT 10h</strong> | Reserva Biológica do Tinguá | <strong>Malu Hatoum</strong>
+Expedição a Reserva do Tinguá sera uma imersão de dois dias entre 10 e 12/10 , 7 vagas, nesse Bioma a fim de promover uma relação de escuta profunda e gravação dos sons daquela paisagem.<a href="https://forms.gle/DeqhF3j6zTmidgMGA"> Link Inscrição</a>
+
+    </div>
+</details>
+
+
+
+<div id='[s]'></div>
+
+
+
+<details class="program-details">
+	<summary>
+    <h2 style="text-align: center;margin:0;">SEMINÁRIOS</h2>
+    </summary>
+    <div style="padding:12px 16px"> 
+
+    <p style="text-align: center;">Auditório das Pós IACS-UFF</p>
+    <br>
+    <h2 style="text-align: center;">23SET</h2>
+
+
+    <div id='[s1]'></div>
+    <li><strong>10h</strong> | (IM)Corporações Femininas em Realidade Estendida: A imaginação como corporeidade digifeminista | <strong>Marcela C. Trevisan</strong><br></li>
+    <div id='[s2]'></div>
+    <li><strong>10h30</strong> | Chicharra Festival Nómada de Escucha: Agente de Escucha de Territorios desde una Perspectiva Ecosófica Radical | <strong>Colectivo Refluxus (Malu Hatoum, Ebe Giovannini) </strong><br>O Coletivo Refluxus trabalha desde 2019 no campo da Arte Sonora, principalmente com ecologia acústica, de forma transdisciplinar. Concebemos e produzimos o Festival Chicharra Nômade de Escuta, que dinamiza a instalação de uma Zona Autônoma Temporária. Hakim Bey refere-se a ZAT como a ciência da psicotopologia da vida cotidiana, ou a busca por "espaços" (geográficos, sociais, culturais, imaginários) com potencial para florescer como zonas autônomas, uma vez que esses espaços estejam relativamente abertos. Ambas as edições do Festival focam em questões relacionadas à ecologia e aos problemas locais e globais do colapso climático que enfrentamos. Encontramos espaços físicos temporários ou digitais atemporais que constituem pequenas insurreições contra o regime da monocultura semiótica capitalista. Um festival de arte sonora independente e colaborativo.</li>
+    <div id='[s3]'></div>
+    <li><strong>11h</strong> | Arte em movimento: reflexões sobre a animação enquanto prática artística contemporânea | <strong>Rafael Costa de Melo</strong><br>O trabalho consiste em uma fala na qual pretendo apresentar a pesquisa de mestrado ""Arte em movimento: uma investigação teórico-crítica sobre as práticas de animação na arte contemporânea"", realizada no PPGCA-UFF. A partir da observação de uma presença cada vez maior de animações no circuito expositivo das artes visuais, a pesquisa tem por objetivo entender quais são as características desta produção e quais são as implicações desse movimento de deslocamento da animação das telas de TV e cinema em direção às galerias e museus, tanto para o público quanto para os artistas. Considerando as limitações de tempo, pretende-se apresentar um panorama sobre as questões centrais e resultados desta investigação.</li>
+    <div id='[s4]'></div>
+    <li><strong>11h30</strong> | Dentro do Conceito: Jogos Digitais, Ecologia do Universalimos e Mobilidade Através de Conceitos | <strong>Pedro Ruback da Silva</strong><br>A apresentação pretende enquadrar jogos digitais dentro da discussão sobre arte conceitual. Busca oferecer um breve repertório contemporâneo sobre filosofia dos conceitos e objetos digitais, de Yuk Hui, Reza Negarestani e Ray Brassier, como forma de investigar os jogos digitais como produtos culturais que estabilizam conceitos, mas ao mesmo tempo o fixam dentro de um determinado espaço formalizado. Os jogos digitais e sua forma artística como objeto, argumento, evidenciam conceitos universalizantes e como eles operam para instruir a diferença (subjetiva, de local) em função da “jogabilidade”.</li>
+    <div id='[s5]'></div>
+    <li><strong>14h</strong> | Ondas curtas de rádio - Comunicação e escuta para além das big techs | <strong>Leo Alves </strong><br>Comunicação sobre a utilização de rádios de onda curta, suas comunidades internacionais, seus usos políticos ou meramente práticos e informacionais. Reflexão também sócio econômica acerca desse tipo de meio, cujas frequências de longa distância que cobrem o globo independem da mediação das bigtechs.</li>
+    <div id='[s6]'></div>
+    <li><strong>15h30</strong> | Tactus - Cuerpos resonantes  | <strong>Rodrigo Ramos</strong><br>O seminário apresentará a pesquisa artística e acadêmica de Rodrigo Ramos sobre o som enquanto vibração, abordando a escuta para além da percepção auditiva e compreendendo o corpo como uma caixa de ressonância capaz de sentir e produzir conhecimento através das vibrações. A atividade compartilhará os processos desenvolvidos durante sua participação e residência artística no Festival Sur Aural, na Bolívia, incluindo concertos vibroacústicos, oficinas e experiências realizadas com pessoas surdas e comunidades indígenas bolivianas.</li>
+    <div id='[v3]'></div>
+    <li><strong>16h</strong> | Pesca atmosférica  | <strong>Leo Alves Vieira</strong><br>Proposta de intervenção na paisagem sonora da orla da baia de Guanabara. Consiste em caminhadas com um certo número de rádios de pilha, cada um com um headphone e um gravador zoom para o participante experimentar a captura de sintonias de ondas curtas, escutando e gravando </li>
+
+
+    <br>
+    <h2 style="text-align: center;">30SET</h2>
+
+    <br>
+
+    <div id='[s8]'></div>
+    <li><strong>10h</strong> | Fundamentos poéticos da forja e o asé do Alágbedé Ògún | <strong>João Victor Tavares da Silva</strong><br>Este trabalho de seminário será realizado através de um capítulo da dissertação de Mestrado do discente do PPGCA João Victor Tavares da Silva. Em Fundamentos poéticos da forja e o asé do Alágbedé Ògún, João Tavares escreve sobre a forja do orisá Ògún, sendo esta um fundamento da tecnologia, mas também disserta sobre a energia vital do Alagbedé, o ferreiro do Orum. </li>
+    <div id='[s9]'></div>
+    <li><strong>10h30</strong> | Tecnodiversidade e Gambiarra: Perspectivas Arte Sonora  | <strong>Giuliano Obici</strong><br>Palestra sobre trabalhos artísticos</li>
+    <div id='[s10]'></div>
+    <li><strong>11h</strong> | Arte, clínica y esquizoanálise | <strong>Gabriel Martinho</strong><br>Esta pesquisa de doutorado propõe a escuta como ato de emissão, provocando aproximações e tensionamentos das fronteiras entre arte sonora e clínica do inconsciente, desde uma perspectiva transversal. Partimos, pois, do entendimento de que o paradigma estético-político da arte contemporânea brasileira foi atravessado pelas transformações no tratamento da loucura, promovendo deslocamentos nos modos de conceber e apresentar a obra artística, enquanto um espaço relacional. Nesta pesquisa, isso se intensifica no encontro com o espaço esquizoanalítico da Casa Jangada, através de produções coletivas e de criação de objetos. Muito se fala do “esquizo” como corte no circuito do sentido, mas também me interessa pensar a invenção como a potência do fluxo “frenia”, tal como uma conexão radiofônica que sintonizamos entre nós. Afinal, como produzir saúde através do exercício experimental do ato de escutar? Seria possível provocar a escuta como um instrumento de comunicação entre inconscientes?</li>
+    <div id='[s11]'></div>
+    <li><strong>11h30</strong> | Escuta e cosmopolítica em A Queda do Céu | <strong>Felippe Mussel</strong><br>Tomando como referência algumas definições sobre “cosmopolítica"", como as de Isabelle Stengers, Bruno Latour, Eduardo Viveiros de Castro e Nego Bispo, a comunicação busca perceber como o conceito dialoga com as ideias de escuta apresentados pelo xamã Davi Kopenawa em A Queda do Céu. Escrito, não por acaso, a partir de um longo e cuidadoso trabalho de escuta do etnólogo Bruce Albert, a obra propõe um deslocamento dos princípios ontológicos e igualmente sensório-perceptivos que marcaram a modernidade ocidental. Através de uma imersão no universo cosmo-ecológico yanomami, nos fala da importância do ato de ouvir como uma “recuo”, uma forma de “saber silenciar”, a qual se mostra uma premissa necessária para reestabelecer as mediações entre o que chamamos de Natureza e de Cultura. 
+    </li>
+    <div id='[s12]'></div>
+    <li><strong>14h</strong> | Uma Conversa Sobre Música Experimetal | <strong>Vera Terra</strong><br>Na palestra, a noção de música experimental é revisitada, a partir dos textos em que o compositor norte-americano John Cage (1912-1992) discorre sobre o tema em seu livro Silence (1961). O termo encontra justificativa ao se efetuar um deslocamento do foco de análise da obra para a relação do ouvinte com a obra, enfatizando a escuta. A ampliação do material da música para além dos sons da escala musical, o surgimento de novas tecnologias de armazenamento, produção e difusão de sons, efetuados no século XX, colocam para o ouvinte a necessidade de uma reeducação, que revise os conceitos de música, ampliando-a para o que veio a ser denominado de arte sonora.</li>
+    <div id='[s13]'></div>
+    <li><strong>15h30</strong> | O Mar Volta a Buscar? Andarilhagem Sonora na Baía da Guanabara | <strong>Mariana de Abreu Campos</strong><br>O artigo questiona se o aumento do nível dos oceanos em curso durante a emergência climática tomaria de volta um espaço que lhe foi tomado num espaço aterrado, a Universidade Pública. Entre indagações sobre arte e ecologia, é debatida a proposta de composição de uma peça sonora durante a dissertação de mestrado que instigue a escuta destas personagens que habitam o IACS numa friccção temporal entre camadas passado-presente-futuro, tal qual um espetáculo ou uma peça audiovisual.</li>
+    <div id='[s14]'></div>
+    <li><strong>16h</strong> | Por uma cartografia sonora-afetiva de Duque de Caxias | <strong>Anne Santos</strong><br>Apresentação oral do escopo metodológico da pesquisa de mestrado (Cartografia sonora-afetiva de Duque de Caxias)</li>
+    <div id='[s15]'></div>
+    <li><strong>16h30</strong> | Ocupação Sonora Sem Terra | <strong>Camila Machado</strong><br>A pesquisa Ocupação Sonora no MST se aproxima da questão das terras e da reforma agrária, a partir das propostas de vida e existência que surgem no contexto de uma área ocupada, tendo a escuta e as sonoridades como procedimentos de aproximação aos territórios. Assim, a escuta e a gravação de sons do campo, das ocupações, dos acampamento e dos assentamentos do MST são a base de uma metodologia de conhecimento a partir do sonoro, se tornando a própria epistemologia da pesquisa. Apresentaremos a potência sonora e de escuta que, na recuperação da terra e na transformação em território, nos ajudam a refletir sobre vida, política e sociedade.</li>
+    </div>
+</details>
+
+
+<div id='[e]'></div>
+
+<details class="program-details">
+	<summary>
+    <h2 style="text-align: center;margin:0;">EXPOSIÇÃO</h2>
+    </summary>
+    <div style="padding:12px 16px"> 
+
+    <p> Em breve mais detalhes</p>
+    </div>
+</details>
+
+<div id='[pa]'></div>
+
+
+
+<details class="program-details">
+	<summary>
+    <h2 style="text-align: center;margin:0;">PERFORMANCES & ATIVAÇÕES</h2>
+    </summary>
+    <div style="padding:12px 16px"> 
+    <p> Em breve mais detalhes</p>
+    </div>
+</details>
+
+
+
+<div id='[minibio]'></div>
+
+<details class="program-details">
+	<summary>
+    <h2 style="text-align: center;margin:0;">MINIBIO ARTISTAS</h2>
+    </summary>
+    <div style="padding:12px 16px"> 
+
+    <p><strong>ANNA SHPAK, HANNAH NELSEN, LEA BABEL</strong>: Anna Shpak estudante da Kunstakademie Düsseldorf na Alemanha fez intercâmbio no PPGCA (UFF) como bolsista do DAAD (Serviço Alemão de Intercâmbio Acadêmico). Durante sua estadia no Programa, ela desenvolveu projetos que dialogam com os contextos espaciais e institucionais locais, aprofundando sua pesquisa sobre arquitetura, percepção e modos de presença. Anna Shpak investiga estruturas arquitetônicas, suas histórias e materialidades, assim como as tensões entre visibilidade e ocultamento. Suas obras frequentemente partem do confronto com espaços concretos,  suas funções, modos de construção ou transformações de uso,  e revelam condições arquitetônicas ou institucionais normalmente ocultas.
+        LEA BABEL é uma artista que trabalha principalmente com a fotografia. Sua obra artística desenvolve imagens que estabelecem pontes conceituais com outras realidades, nas quais experiências e memórias pessoais se manifestam ao lado de sentimentos e vivências coletivas. Por meio de formas de narrativa específicas para cada local, ela transforma e preserva impressões e memórias, com o objetivo de tornar a história visível. Trabalhando com recursos analógicos e digitais, ela encara os lugares como sistemas complexos compostos por diversos componentes, com um interesse particular pela atmosfera e pela carga histórica deles.
+        HANNAH NELSEN é uma artista multidisciplinar que trabalha com dioramas, instalações e pintura, entre outras formas de expressão. Ela estuda na Kunstakademie Düsseldorf, na Alemanha. Em seu trabalho, ela explora a relação entre os seres humanos e a natureza, questionando criticamente nossa autopercepção e a noção de “naturalidade” na Era do Antropoceno. A análise de símbolos biográficos e culturais, bem como a questão da percepção e da realidade, desempenham um papel central em sua prática artística.</p>
+    <p><strong>ANNE SANTOS, JOÃO LOURENÇO</strong>: ANNE SANTOS, Duque de Caxias/RJ. Formada em Ciências Sociais (UFF). Mestranda no Programa de Estudos Contemporâneos das Artes (PPGCA UFF). Artista fluminense com atuação na área de sonoridades, com ênfase no cinema e performance sonora. Atua nas esferas do som direto, curadoria, cineclube, formação e direção. Integrante do grupo de pesquisa em arte sonora Soma Rumor. Desde 2010 até o presente, participa do coletivo Mate com Angu. Atualmente, desenvolve a pesquisa sobre Cartografia sonora-afetiva de Duque de Caxias. Reside na zona portuária do Rio de Janeiro. 
+    JOÃO LOURENÇO, São Raimundo Nonato/PI. É um artista radicado no RJ. Participou como baixista na gravação do disco ""Queda Livre"" (2024) do Caxtrinho (QTV Selo). Também como baixista, tem acompanhado o grupo ""Onda de Beleza Natural"" que mistura gêneros de guitarra nortista brasileira com improviso free noise. Entre 2023 e 2024 realizou o filme ""Bacia dos Sonhos"" com Anne Santos pela residência ""Cinema Lab Expandido"" (Cinemateca MAM). Tem-se dedicado aos estudos na música e no cinema.
+    </p>
+    <p><strong>ATELIÊ ENTREABERTO</strong>: O Ateliê Entreaberto é um grupo de investigação e invenção criado em 2023, no qual arte e clínica se encontram para se contaminar e experimentar novos modos de estar em grupo. Em encontros semanais, trabalhamos com proposições, que articulam corpo, escuta, cuidado, por meio de linguagens artísticas como arte sonora, performance, vídeo, colagem, desenho. A cada proposta, busca-se inventar um território coletivo aberto ao inesperado, à multiplicidade e aos impulsos que surgem no encontro. </p>
+    <p><strong>BAÍA BAHIA</strong>: João Tavares e Mirian Alves criaram juntos o duo Baía Bahia, a partir do encontro de suas águas que aconteceu em 2025 no Instituto de Artes e Comunicação Social da Universidade Federal Fluminense, na beira da Baía de Guanabara. O casal reconheceu a origem familiar semelhante que remete as vivências caiçaras de seus ancestrais do litoral do norte da Baía. Assim nasceu Baía Bahia, um projeto cocriado cuja proposta é mergulhar nessa confluência de águas através de trabalhos audiovisuais, música experimental e sound art.</p>
+    <p><strong>BE DA MATTA GOYTAKÁ</strong>: Sou artista multilinguagens, pessoa não-binária, Goytaká, bacharel em Artes(UFF) e educador popular pelo MAB - Movimento pelos Atingidos por Barragens. Fui bolsista na monitoria do laboratório de produção musical e investigação cultural e no PIBIC do grupo de práticas artísticas contemporâneas, com uma pesquisa sobre portfólio(2014/2015). Faço graduação em pedagogia na UNILASALLE e mestrado em Estudos Contemporâneos das Artes no PPGCA UFF. Trabalho com educação, curadoria, fotografia, instalação, escultura, performance, intervenções, escrita, fotografia, edição, audiovisual e artes visuais. Fui parte da residência coletiva Ksa do Mato que culminou no filme "Ksa do Mato" de Camila Paola. Laboratório de corpo autogestionado labirinta, que culminou no filme "Labirinta" dir. Isadora Lobo. Filme "Guerrilha da Mata" dir. Clara Chroma.</p>
+    <p><strong>CAMILA MACHADO</strong>: Camila Machado é cineasta especializada em som e fundadora da produtora independente Trotoar, produtora de filmes como “Chão”, “Cadê Edson?” e “Branco Sai, Preto Fica”. Bacharel e Mestre em Comunicação/Cinema pela UnB e especialista em som pela EICTV – Cuba. Atualmente cursa seu doutoramento em Artes Contemporâneas na UFF e faz parte do SOMA, grupo de estudos em Arte Sonora. Idealizou o projeto Sonário do Sertão, apoiado pelo Rumos e premiado pelo IPHAN. Na sua segunda edição, o Sonário tem seu acervo captado em territórios do MST do Distrito Federal.</p>
+    <p><strong>COLECTIVO REFLUXUS Y PAVEL SHALNOV</strong>: Colectivo Refluxus é um coletivo de artistes sonoras fundado em 2019 por alunes do mestrado em Arte Sonora na Unviversidade de Barcelona. Hoje é composto por três mulheres de diferente continentes e distintas gerações: Ebe Giovannini, Itália; Malu Haotum, Brasil e Anat Moss, Israel. Nos aproximamos do som como matéria de agência para transformação social através de processos de escuta coletiva e situada. Participamos de Festivais de Rádio e Arte Sonora no mundo, exposições individuais e coletivas em países da América Latina e Europa, Residencias artisticas na comunidade de Piansuola, Italia. Idealizamos e produzimos o Chicharra Festival Nômade de Escuta que teve sua primeira edição em 2023, na maior Reserva Natural da Europa, os Marismas de Doñana, em Almonte, Espanha e a segunda na Zona Maya, México em 2026.</p>
+    <p><strong>FELIPPE MUSSEL</strong>: Pesquisador, sonidista e realizador audiovisual. Idealiza e colabora com projetos interdisciplinares — das artes à antropologia, do cinema à saúde mental — em trabalhos que investigam as potências cosmopolíticas da auralidade e tensionam a tradição sensível do Ocidente. Atua na criação de filmes, instalações e peças sonoras, além de desenvolver práticas artísticas em diálogo com comunidades indígenas e grupos periféricos no Brasil, propondo a valorização da oralidade e da escuta como forma de preservação dos saberes ancestrais e na luta por direitos. Realizou sua formação acadêmica na Universidade Federal Fluminense (UFF), com Graduação em Produção Cultural (2008), Mestrado em Cinema e Audiovisual (PPGCine) e Doutorado em Estudos Contemporâneos das Artes (PPGCA). Atuando profissionalmente na captação, edição e desenho de som, trabalhou em mais de 40 filmes brasileiros nos últimos 20 anos. Dirigiu o documentário longa-metragem Em busca de um lugar comum (2013) e o curta-metragem experimental Espectro Restauración (2022). </p>
+    <p><strong>GABRIEL MARTINHO, GABRIELA SERFATY</strong>: GABRIEL MARTINHO artista sonoro-visual e esquizoanalista. Integrou projetos internacionais de rádio-arte e cinema. Atualmente, pesquisa a escuta como tecnologia e ato de intervenção, atuando em processos de criação e de subjetivação. GABRIELA SERFATY:  artista, psicanalista e psiquiatra. Realizou a formação de artistas do Parque Lage em 2018. Desde então, tem participado de algumas exposições em instituições brasileiras, sua pesquisa artística parte da escuta para realizar algumas experimentações em performance e arte sonora.</p>
+    <p><strong>GIULIANO OBICI</strong>: artista-pesquisador em arte sonora e professor adjunto do Departamento de Arte da Universidade Federal Fluminense. Doutor em Artes pela USP, com bolsa sanduíche do DAAD-CAPES na Technische Universität de Berlim e FAPESP. É mestre em Comunicação e Semiótica (PUC-SP), psicólogo (UEM) e autor do livro "Condição da Escuta". Lecionou na Anhembi Morumbi e ministrou cursos e palestras sobre instalações audiovisuais interativas, luteria digital e software/hardware livre em instituições e festivais internacionais como London University of the Arts, UdK e TU Berlin, Ultima Academy (Oslo) e Medialab Prado (Madri). Recebeu o prêmio Giga-Hertz-Preis do ZKM Karlsruhe / Experimental Studio Freiburg e a Red Bull Residency. Entre seus trabalhos artísticos recentes destacam-se Simulacrum Violão, Screen Utopia, Dissimulation, Simulacrum Piano, Intensidades Brutalistas, Vozes Simulacrum, Laptop Coral, Simulacrum Chamber Orchestra, Concerto para Lan House e Compro Auri.</p>
+    <p><strong>GRIGORY DARMAN </strong>: GG DEE is the alias of Artist, Producer and DJ Grigory Darman from Düsseldorf Germany. He released music under various aliases and engaged in Sound Art performances, as well as writing and performing Sound Art pieces in the realm of fine arts and collaborating with various Visual Artists. GGDEE is also resident DJ and part of the curatorial team at Salon des Amateurs in Düsseldorf. His productions and live-sets  explore different fields and cross-sections of pop, art and techno music. </p>
+    <p><strong>GRUPO SONORO DA CASA JANGADA</strong>: O Grupo Sonoro faz parte dos dispositivos grupais da Casa Jangada, espaço de criação de várias intersecções entre a Arte, a Clínica e a Rua, localizado no bairro de Botafogo no Rio de Janeiro. Segue ativo desde 2021 com a iniciativa de vivenciar experiências com sonoridades (ruído, barulho, silêncio, pausa, tempo, ritmo, etc) desviando de uma certa organização que constitui o universo da música. Se o som é o que nos mobiliza, então, é a escuta o que nos conecta e nos inclina a criar e ocupar territórios existenciais coletivos em processos clínicos singulares. O Grupo Sonoro participou da 3a Jornada de artes de grupo e práticas de cuidado, produzido pela UFSJ e UFF, com a proposição “Dicionoro”, além de exibir o vídeo “Dicas para pessoas que não são da área” na Mostra Casa Jangada no MAM, no Estação Net Rio, no IV Soma Rumor Encontro Latino Americano de Arte Sonora e na exposição DELIRAR A VIDA / REFAZER O MUNDO no Museu Nacional de Brasília.</p>
+    <p><strong>HENRIQUE IWAO</strong>: Henrique Iwao é escritor, pesquisador, artista, organizador de eventos e técnico de som, com foco em música experimental, unindo prática e teoria. Mestre pela USP (2012) com pesquisa sobre colagem musical na música eletrônica experimental e doutor pela UFMG (2023), com tese sobre significação musical e a ontologia da arte de Arthur C. Danto. Integrou o Ibrasotope (2007-2013) e atualmente é membro da Seminal Records, organizador do evento de ruído em praça pública Praça 6 (BH) e improvisador residente no Quartas de Improviso. Autor de dois livros: "Prosódia Musical, Jogos Etc" (2024, partituras de evento) e "O melhor amigo do rato" (2026, prosa poética). Lançou o álbum "Coleções Digitais" e o projeto "Palavra Palavra", que reordena canções brasileiras em ordem alfabética. Sua discografia está disponível em henriqueiwao.bandcamp.com.</p>
+    <p><strong>IVANI SANTANA</strong>: Ivani Santana desenvolve projetos artísticos de dança mediada por tecnologias desde os anos 1990, incluindo espetáculos interativos e imersivos, vídeo-instalações, dança telemática e videodança. Recebeu prêmios como o UNESCO Prize (2006), residência no Chaillot Théâtre national de la Danse (2023), e apoios do IBERESCENA (2012) e edital Cultura Digital (2013). Desde 2019, pesquisa dança com realidades sintéticas (VR, RA, IA), criando obras como ECOS (2021), Entre Seres (2024) e instalações imersivas. Por 15 anos, ensinou metodologias telemáticas a artistas de vários países. É pesquisadora na UFRJ, colabora com a UFBA e integra o MediaLab e o grupo Soma (UFF).</p>
+    <p><strong>JOÃO VICTOR TAVARES DA SILVA</strong>: João Victor Tavares da Silva é homem preto, artista, educador e pesquisador com ênfase nas poéticas sonoras. Formou-se em Pedagogia através do ProUni na Universidade Estácio de Sá, atualmente cursa Mestrado em Estudos Contemporâneos das Artes pela Universidade Federal Fluminense. Atuou como bolsista de extensão no programa P.A.L.A.V.R.A com foco em Alfabetização Discursiva. Também atuou como monitor em um projeto de monitoria com ênfase em sonoridades, "As paredes tem ouvidos". Atualmente é bolsista da Capes com a pesquisa em Arte e Tecnologia "Xirê Teóricoprático de Ògún: Gambiarras do ferro na forja ao código na arte sonora", sendo orientado por Giuliano Obici, integrante do grupo de pesquisa SOMMA.</p>
+    <p><strong>LEO ALVES </strong>: Leo Alves é artista sonoro, compositor e professor. Trabalha música escrita, performances e instalações, passando por peças eletroacústicas lançadas em selos de música experimental dentro e fora do Brasil. Já assinou trilhas para teatro e curtas, e também faz ativismo por direitos humanos. Mestre e doutorando pelo Programa de Estudos Contemporâneos das Artes (PPGCA-UFF), vêm pesquisando a improvisação como método ético, estético e pedagógico, e faz parte do grupo SOMA (som nas artes). Também participa da produção do festival brasileiro de música experimental Frestas Telúricas, do Somarumor, festival latino americano de arte sonora e é guitarrista da banda The Lautreamonts. link: https://soundcloud.com/leoalvesvieira </p>
+    <p><strong>MALU HATOUM E FILIPE BRITTO</strong>: MALU HATOUM é multiartiste sonora, intérprete vocal, performer, produtora e escritora. Doutorande no programa de Estudos Contemporâneos das Artes na Universidade Federal Fluminense e mestre em Arte Sonora pela Universidade de Barcelona, Espanha. Pós-graduada em Técnica Klauss Vianna na PUC-SP e em Arte Integrativa pela Universidade AnhembiMorumbi-SP. Bacharel em Psicologia, USP. Estudou canto lírico na Fundação das Artes de São Caetano do Sul-SP. Pesquisa processos de escuta e comunicação transespécies tendo como manifestação a voz-corpo. Integra os coletivos SOMA e Colectivo Refluxus, a qual é co-fundadora. Participou em várias exposições coletivas e individuais na Europa e Brasil e teve trabalhos exibidos na África, América Latina e México. Organiza junto ao Colectivo Refluxus o Festival Chicharra Nómada de Escucha e FEstival SomaRumor com o grupo Soma.
+    FILIPE BRITTO: é artista e pesquisador. Doutorando em Estudos Contemporâneos das Artes, PPGCA – UFF e formado mestre pelo mesmo programa.Trabalha entre os campos da imagem e da programação algorítmica. Pesquisa dinâmicas coletivas de cuidado com os sonhos, fabulações especulativas, e modelos de linguagem conhecidos como ""inteligências artificiais"".</p>
+    <p><strong>MARCELA C. TREVISAN E PAUL NEUGEBAUER</strong>: Marcela Trevisan é dançarina, atriz, performer e artista-pesquisadora. Doutoranda no Programa de Pós-Graduação em Estudos Contemporâneos das Artes da UFF, Mestra em Artes Cênicas pela UFBA, Bacharel em Artes Cênicas pela UFSC. Integrante do GP Poéticas Tecnológicas: corpoaudiovisual e do Grupo SOMA: Som nas Artes. Atua na área de artes cênicas há mais de 15 anos e entre alguns de seus trabalhos estão a participação como dançarina convidada nos eventos ""Latência Expandida"" no Foro de las Artes (2025) e F(r)esta Festival de Arte Sonora no RJ. Atuação no curta-metragem “Areia” (2023) com direção de Duo Strangloscope, ganhador no Prêmio Conjunto da Obra do MFL do RJ, na performance ""ConferênciAção Poéticas (Des)confinadas"" apresentada na Artech e II EiDCT, e no solo de dança-teatro ""Lamúria"" dentro do FIK 2020. Tem uma parceria artística com o soundesigner Rodrigo Ramos, com trabalhos como a peça sonora ""Strong and Pulsating"" (2021) na Rádio Ressonance FM de Londres. PAUL NEUGEBAUER: é físico e artista audiovisual. Formou-se em Física pela Universidade de Leipzig em 2023, onde atualmente atua como pesquisador. Desde 2024, desenvolve uma pesquisa artística própria que une ciência, tecnologia e experimentação audiovisual, explorando práticas como circuit bending, manipulação de vídeo digital e linguagens de programação para criar novas formas de expressão.</p>
+    <p><strong>MARI ABREU</strong>: Mari Abreu é atriz, artista visual, arte educadora e cientista social. Atuou em coletivos teatrais como Dodecafônico e Frestas na cidade de São Paulo e introduziu a técnica da deriva em formações de professores de Arte no Sistema SESI SP. Atualmente é professora efetiva de Artes Visuais no Colégio Universitario da UFF e também mestranda no PPGCA da UFF na linha experiência, conceito e sonoridades. Compõe os grupos de pesquisa  O SOM ATRAVESSADO e SOMA.  Investiga temas como escuta, narração, ecofabulações, andarilhagens e relações multiespécies.</p>
+    <p><strong>RAQUEL STOLF</strong>: Artista e pesquisadora. Suas proposições investigam relações entre processos de escrita, experiências de silêncios e situações de escuta, bem como, o procedimento da coleção (coleciona sons de fins de vácuo, sabonetes de hotel, notícias com animais/vegetais, espécies de silêncios, etc.). Coordena o selo céu da boca, pelo qual vem editando suas proposições e publicações que envolvem desdobramentos em instalações, micro-intervenções, ações, vídeos, fotografias, desenhos e textos. Atua como professora nos cursos de graduação e pós-graduação em Artes Visuais da UDESC. Doutora (2011) e Mestre (2002) em Artes Visuais pela UFRGS, com estágio pós-doutoral (2024) no PPGCA, pela UFF. Coordena o Programa de Extensão Sala de Leitura | Sala de Escuta no DAV/CEART/UDESC e o grupo de pesquisa Proposições artísticas contemporâneas e seus processos experimentais (UDESC/CNPq).</p>
+    <p><strong>OZZO UKUMARI </strong>: OzZo Ukumari – boliviano, mestre em Pesquisa e Produção Artística pela Universidade de Barcelona, com especialização em arte e tecnologia, atualmente vive e trabalha em Santa Cruz de la Sierra. É artista, professor, pesquisador e gestor cultural; Diretor do Festival Sur Aural; Sua prática está ligada às novas mídias, onde desenvolve obras que combinam tecnologia e conhecimentos ancestrais.</p>
+    <p><strong>PEDRO RUBACK DA SILVA</strong>: Pedro Ruback Da Silva é Mestre em Antropologia e Doutorando em Estudos Contemporâneos das Artes pelo PPGCA-UFF. Sua pesquisa gira em torno de jogos digitais, arte sonora e arte conceitual, antropologia da religião, teoria do conhecimento, magia e esoterismo. Faz parte do grupo de pesquisa Som nas Artes da Universidade Federal Fluminense (SOMA-UFF).</p>
+    <p><strong>RODRIGO GIRAFA</strong>: Rodrigo Girafa é um guitarrista, compositor, improvisador e produtor cultural carioca.Ele possui uma sólida formação internacional, sendo Mestre em Guitarra Jazz pelo Conservatorio G. Martucci de Salerno e bacharel pelo Conservatorio G. Verdi de Turim, ambos na Itália. É bastante reconhecido por sua atuação na cena de música experimental, contemporânea e improvisação livre."</p>
+    <p><strong>RODRIGO RAMOS</strong>: Rodrigo Ramos é um artista multidisciplinar que pesquisa formas de escuta e sonoridades através da arte/tecnologia/meio ambiente. É formado em Cinema pela UFSC, mestre em Artes Visuais (PPGAV) pela UFBA e o doutorando em Sonoridades (PPGCA) na UFF. Trabalha como Artista Sonoro e Sound Designer para Teatro, Dança e Cinema. É criador do projeto Espelho Sonoro, escultura sonora inspirado nos localizadores da Primeira Guerra Mundial, expondo em diversos centros culturais, como: MIS, Oi-Futuro, Farol Santander e Caixa Cultural Brasília; É membro do grupo de pesquisa SOMA (PPGAC -UFF). www.rodosound.com @rodrigo_rodo_ramos</p>
+    <p><strong>SUCO-SULCO</strong>: Sala de leitura | Sala de escuta propõe investigações e conversas acerca de publicações de artista, de processos e projetos em arte sonora e de práticas de escrita, bem como, a produção de proposições, peças sonoras e publicações de artista impressas e sonoras, junto ao Departamento de Artes Visuais e PPGAV da UDESC, com parcerias com outras universidades, projetos e grupos de pesquisa. Envolve a realização de três ações (acervo sl-se – arquivo de publicações da sl-se; alguma coisa comentada – ciclo de conversas com convidados/as; ciclo de oficinas com a equipe e convidados/as), sendo coordenado por Raquel Stolf como programa de extensão, desde 2023. O projeto foi proposto por Raquel Stolf e Regina Melim, em 2015, como um espaço experimental no DAV/PPGAV/UDESC, abrigando um acervo de publicações de artista como lugar de pesquisa e difusão, disponibilizado para leitura e escuta. Entre a galeria, o laboratório e a biblioteca, entre espaço para exposições e para a leitura/escuta, o projeto vem transitando em outros contextos, desde a sala de aula, o espaço da publicação ou o espaço radiofônico, entre outras ações e possibilidades de deslocamentos. Proposição: Raquel Stolf (coord.), Ariane Oliveira, Claudio Moreira, Djuly Gava, Gabriel Villas, Juliana Silva, Juliano Ventura, Luana Navarro, Sarah Uriarte. Apoios (equipe SomaRumor): Flavia Goa, Pedro Albuquerque. Participantes: Bruno da Silva Casagrande Hanstenreiter; Calû Fernandez; Clarice NillesEliana Gonçalves de Souza; Gabriela NobreLaura Cristina Souza; Luanda; Maria Clara Confort Folz; Marjoly Queiroz de Pinho; Matheus Abel; Nathália Andrião Trotta; Vitória Porto. Projeto gráfico: Claudio Moreira e Raquel Stolf. Diagramação: Claudio Moreira. Edição: céu da boca e editora molécula</p>
+    <p><strong>VERA TERRA</strong>: Pianista, compositora, e ensaísta. Mestre em Artes pelo Programa de Estudos Pós-Graduados em Comunicação e Semiótica da PUC-SP. É autora do livro "Acaso e aleatório na música", publicado pela EDUC/FAPESP no ano 2000. Pesquisadora e intérprete da música de John Cage, participou do concerto *John Cage* na Sala Cecília Meireles, por ocasião  da segunda vinda do compositor ao Brasil, organizado pela compositora Jocy de Oliveira. Publicou, em dezembro de 2019, um ensaio na revista digital DEBATES/UNIRIO, n. 22, sobre o projeto de instalação realizado na cidade de Halberstadt, Alemanha, que expande o conceito de tempo da composição ASLSP¸ inspirada no Finnegans Wake, de James Joyce. Recentemente, vem se dedicando à criação de peças radiofônicas que integram música e literatura. Em 2017, sua composição Devir Alice Mix, fantasia sobre a Suíte para Piano de Brinquedo de John Cage, estreou na Radio Documenta 14, sendo difundida mundialmente pela Rádio MEC-Emissoras EBC. Para a comemoração do Bloomsday, em 16 de junho de 2022, concebeu uma série de quatro podcasts sobre episódios do Ulisses, de James Joyce, atualmente hospedados no site da rádio, na série Especiais Rádio MEC.</p>
+    <p><strong>TATO TABORDA </strong>: Compositor, intérprete e curador de eventos artísticos dedicados à experimentação musical. Professor e coordenador do curso de Artes e docente do programa de pós-graduação Estudos Contemporâneos das Artes da UFF. Autor de obras como Estratos para orquestra de instrumentos nativos do altiplano andino encomendada pelo festival de Donaueschingen e a ópera A Queda do Céu estreada na Bienal de Munique, tem colaborado  com produções de teatro, dança e cinema nas ultimas três décadas. </p>
+    <p><strong>ZAH (IZABELLA LESSA)</strong>: Compositora intuitiva, poeta e cantora, Zah é artista natural de Niterói e traz à Nova MPB uma fusão de indie pop, influências regionais e latinas. Desde 2022 lançou singles autorais que dão voz à expressão do feminino e de suas emoções. Já se apresentou no Museu de Arte do Rio, foi participante do Arte Sônica Amplificada e convidada para o projeto Canções do Interior em 2025. Agora em uma nova fase, apresenta seu último trabalho "Tropicaliente".</p>
+
+
+    </div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</main>
+</div>
+
+<style>
+#toc-list a.active{font-weight:700;background:#eef6fb;padding:4px;border-radius:6px;display:inline-block}
+mark.match{background:#fff7cc;padding:0 3px;border-radius:2px}
+
+/* Collapsible section styles */
+details.program-details{border:1px solid #e6eef8;border-radius:12px;padding:0;margin:12px 0;background:var(--card);overflow:hidden}
+details.program-details[open]{box-shadow:0 10px 26px rgba(15,23,42,0.06)}
+details.program-details summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfdff)}
+details.program-details summary::-webkit-details-marker{display:none}
+details.program-details .summary-title{font-weight:700;color:var(--accent-2);display:flex;gap:12px;align-items:center}
+details.program-details .summary-btn{background:#fff;border:1px solid #cbd5e1;border-radius:6px;padding:6px 10px;color:var(--accent);cursor:pointer}
+details.program-details:focus-within summary{outline:3px solid rgba(43,108,176,0.12)}
+
+.event-card, article.event-card{transition:transform .12s ease, box-shadow .12s ease}
+article.event-card:focus{transform:translateY(-3px);box-shadow:0 8px 20px rgba(15,23,42,0.06);outline:2px solid rgba(43,108,176,0.12)}
+
+.artist{border-left:3px solid #e6eef8;padding:10px;margin:8px 0;border-radius:6px;background:#fff}
+
+</style>
+<script>
+			document.addEventListener('DOMContentLoaded', function(){
+				// Note: índice (TOC) removido; manter apenas a busca.
+				// Garantir ids em headings para anchors e acessibilidade
+				document.querySelectorAll('h2, h3, h4').forEach(h=>{
+					if(!h.id){
+						h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9\u00C0-\u017F]+/gi,'-').replace(/^-|-$/g,'');
+					}
+				});
+
+	// convert immediate lists after H2 into event cards
+	document.querySelectorAll('h2 + ul').forEach(ul=>{
+		const section = document.createElement('div');
+		section.className = 'section-card';
+		ul.querySelectorAll('li').forEach(li=>{
+			const card = document.createElement('div');
+			card.className = 'event-card';
+			const a = li.querySelector('a');
+			if(a){
+				const body = document.createElement('div'); body.className = 'body';
+				body.innerHTML = a.innerHTML;
+				card.appendChild(body);
+			} else {
+				const body = document.createElement('div'); body.className = 'body';
+				body.innerHTML = li.innerHTML;
+				card.appendChild(body);
+			}
+			section.appendChild(card);
+		});
+		ul.parentNode.insertBefore(section, ul);
+		ul.remove();
+	});
+
+	// wrap H2 + section-card into semantic sections and convert cards to articles
+	document.querySelectorAll('h2').forEach(h2=>{
+		const next = h2.nextElementSibling;
+		if(next && next.classList && next.classList.contains('section-card')){
+			const container = document.createElement('section');
+			container.className = 'program-section';
+			container.setAttribute('aria-labelledby', h2.id);
+			h2.parentNode.insertBefore(container, h2);
+			container.appendChild(h2);
+			container.appendChild(next);
+		}
+	});
+	document.querySelectorAll('.section-card .event-card').forEach(div=>{
+		const article = document.createElement('article');
+		article.className = div.className;
+		article.innerHTML = div.innerHTML;
+		article.setAttribute('role','article');
+		article.setAttribute('tabindex','0');
+		const t = article.querySelector('strong');
+		if(t) article.setAttribute('aria-label', t.textContent.trim());
+		div.parentNode.replaceChild(article, div);
+	});
+
+	// convert .program-section into collapsible <details>
+	document.querySelectorAll('.program-section').forEach(section=>{
+		const h2 = section.querySelector('h2');
+		const contentNodes = Array.from(section.children).filter(n=>n !== h2);
+		const details = document.createElement('details');
+		details.className = 'program-details';
+		const summary = document.createElement('summary');
+		summary.setAttribute('role','button');
+		// move heading into summary to keep id targets
+		summary.appendChild(h2);
+		const btn = document.createElement('span'); btn.className='summary-btn'; btn.textContent='Ocultar';
+		summary.appendChild(btn);
+		details.appendChild(summary);
+		contentNodes.forEach(n=>details.appendChild(n));
+		section.parentNode.replaceChild(details, section);
+		// default open
+		details.open = true;
+		// toggle button text
+		details.addEventListener('toggle', ()=>{ btn.textContent = details.open ? 'Ocultar' : 'Mostrar'; });
+		// keyboard support on summary
+		summary.addEventListener('keydown', e=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); details.open = !details.open; } });
+	});
+
+	// also group ARTISTAS into a semantic section and convert paragraphs to articles
+	const artistH2 = Array.from(document.querySelectorAll('h2')).find(h=>/ARTISTAS/i.test(h.textContent));
+	if(artistH2){
+		const sec = document.createElement('section'); sec.className='artists'; sec.setAttribute('aria-labelledby', artistH2.id);
+		artistH2.parentNode.insertBefore(sec, artistH2);
+		sec.appendChild(artistH2);
+		let el = artistH2.nextElementSibling;
+		while(el && el.tagName !== 'H2'){
+			const next = el.nextElementSibling;
+			if(el.tagName === 'P'){
+				const art = document.createElement('article'); art.className='artist'; art.innerHTML = el.innerHTML; sec.appendChild(art); el.remove();
+			} else {
+				sec.appendChild(el);
+			}
+			el = next;
+		}
+	}
+
+
+
+	// search with highlighting and section filtering
+		const search = document.getElementById('search');
+		const countSpan = document.createElement('small');
+		countSpan.style.marginLeft='8px';
+		countSpan.className='muted';
+		// anexar contador ao lado do campo de busca
+		search.parentNode.appendChild(countSpan);
+
+	function escapeRegExp(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
+	function clearHighlights(){ document.querySelectorAll('mark.match').forEach(m=>{ m.replaceWith(document.createTextNode(m.textContent)); }); }
+
+	search.addEventListener('input', function(e){
+		const q = e.target.value.trim().toLowerCase();
+		clearHighlights();
+		let total=0;
+		// filter program sections
+		document.querySelectorAll('.program-section').forEach(sec=>{
+			if(!q){ sec.style.display=''; return; }
+			sec.style.display = sec.textContent.toLowerCase().indexOf(q) === -1 ? 'none' : '';
+		});
+
+		if(q){
+			const nodes = document.querySelectorAll('h2,h3,h4,p,.body,a,li,article,details');
+			nodes.forEach(n=>{
+				if(n.closest('#toc-box')) return;
+				const text = n.textContent;
+				const matches = text.toLowerCase().match(new RegExp(escapeRegExp(q),'ig')) || [];
+				total += matches.length;
+				if(matches.length){
+					const regex = new RegExp('('+escapeRegExp(q)+')','ig');
+					n.innerHTML = n.innerHTML.replace(regex, '<mark class="match">$1</mark>');
+					// ensure parent details expanded
+					const details = n.closest('details.program-details'); if(details) details.open = true;
+				}
+			});
+		}
+		countSpan.textContent = total ? (`${total} resultado${total>1?'s':''}`) : '';
+	});
+
+	// Enter focuses first match
+	search.addEventListener('keydown', function(e){ if(e.key==='Enter'){ const m = document.querySelector('mark.match'); if(m){ const el = m.closest('a, article, h2, h3, h4, p'); if(el){ el.scrollIntoView({behavior:'smooth',block:'center'}); el.focus && el.focus(); } } } });
+
+	document.documentElement.style.scrollBehavior = 'smooth';
+});
+</script>
+
+</body>
+</html>
