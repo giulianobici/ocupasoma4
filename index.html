@@ -9,6 +9,20 @@
   <!-- Meta tags para SEO e correção de idioma -->
   <meta content="Página de exemplo em português com correção de acentos e grafia" name="description"/>
   <meta content="português, acentos, grafia, HTML" name="keywords"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem com Object-Fit</title>
+    <style>
+        .imagem-responsiva {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain; /* mantém proporção sem cortar */
+        }
+    </style>
+
+
+
   <meta content="Giuliano Obici" name="author"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Oswald:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
   <meta content="pt-BR" http-equiv="Content-Language"/>
@@ -136,15 +150,12 @@
  <body>
   <div class="wrap">
    <main>
-    <h1 style="text-align: center; margin:0">
-     OCUPASOMA #4
-    </h1>
+<img src="./cabeca1.png" alt="Descrição da imagem" class="imagem-responsiva">
     <h2 style="text-align: center; margin:0">
-     17 SET a 10 OUT
     </h2>
     <br/>
     <p style="text-align: justify;"> 
-        Entre os dias <strong>17 de setembro e 10 de outubro de 2026</strong>, o Instituto de Artes e Comunicação 
+        Entre os dias <strong>17 de setembro e 12 de outubro de 2026</strong>, o Instituto de Artes e Comunicação 
 Social da Universidade Federal Fluminense (IACS-UFF), no Campus Gragoatá, em Niterói, 
 será palco da 4ª edição do OcupaSoma. Organizado e produzido pelo Grupo de Pesquisa <strong>SOMA (Som nas Artes)</strong>, vinculado ao PPGCA, o evento se consolida como um 
 espaço de encontro e difusão da produção artística e acadêmica do grupo e de seus parceiros de pesquisa.</p>
@@ -154,7 +165,7 @@ exposição, performances, ativações, oficinas, vivências e um seminário. As
 aproximar o público das práticas sonoras e artísticas contemporâneas, em um diálogo aberto entre criação, 
 escuta e pensamento crítico.</p>    
 <p style="text-align: justify;">As oficinas e vivências estão com 
-     </a> inscrições abertas até o dia <strong>15 de setembro</strong>, por meio de <a href="https://forms.gle/DeqhF3j6zTmidgMGA">formulário online</a>.
+     </a> <strong> inscrições abertas </strong> até o dia <strong>15 de setembro</strong>, por meio de <a href="https://forms.gle/DeqhF3j6zTmidgMGA">formulário online</a>.
 Para mais informações, acompanhe o perfil no Instagram: <a href="https://www.instagram.com/_soma_lab/">
       @_soma_lab
      </a>.
@@ -174,7 +185,7 @@ A seguir, você confere a programação completa e todos os detalhes desta ediç
 
     <details class="program-details">
      <summary>
-      <h2 style="text-align: center; margin:0">
+      <h2 style="text-align: center; max-width:900px; margin:0">
        PROGRAMAÇÃO GERAL
       </h2>
      </summary>
@@ -1612,12 +1623,12 @@ A seguir, você confere a programação completa e todos os detalhes desta ediç
 
 
 
+    <img src="./creditos.png" alt="Descrição da imagem" class="imagem-responsiva">
 
 
 
 </main>  
 </div>
-
 
 
 
@@ -1669,8 +1680,9 @@ details.program-details:focus-within summary{outline:3px solid rgba(43,108,176,0
 .dates-expanded .dates-expanded-close{float:right;padding:6px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:var(--card);color:var(--accent);cursor:pointer}
 
 /* Modal overlay for day content */
-.modal-overlay{position:fixed;inset:0;background:rgba(2,6,23,0.6);display:none;align-items:center;justify-content:center;z-index:9999;padding:20px}
-.modal-overlay.active{display:flex}
+.modal-overlay{position:fixed;inset:0;background:rgba(2,6,23,0.55);display:none;align-items:center;justify-content:center;z-index:9999;padding:20px;backdrop-filter: blur(2px)}
+ .modal-overlay.active{display:flex}
+
 .modal-dialog{position:relative;max-width:1100px;width:100%;max-height:90vh;overflow:auto;border-radius:12px}
 .modal-content{background:var(--card);padding:18px;border:1px solid rgba(255,255,255,0.06);border-radius:12px;box-shadow:0 20px 50px rgba(15,23,42,0.4)}
 .modal-title{color:var(--white);font-weight:700;margin:0 0 12px;font-family:'Oswald', 'Montserrat', sans-serif}
