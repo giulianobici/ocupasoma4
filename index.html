@@ -13,12 +13,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imagem com Object-Fit</title>
     <style>
-        .imagem-responsiva {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            object-fit: contain; /* mantém proporção sem cortar */
-        }
+      .imagem-responsiva {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain; /* mantém proporção sem cortar */
+      }
+      .site-header{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100vw;
+        height:100vh; /* occupy full viewport height */
+        margin-left:calc(50% - 50vw);
+        margin-right:calc(50% - 50vw);
+        padding:0;
+        display:block;
+        overflow:hidden;
+        z-index:99999; /* ensure foreground over background */
+        pointer-events:none; /* allow interaction with content underneath */
+      }
+      .site-footer{
+        position:fixed;
+        bottom:0;
+        left:0;
+        width:100vw;
+        height:100vh;
+        margin-left:calc(50% - 50vw);
+        margin-right:calc(50% - 50vw);
+        padding:0;
+        display:block;
+        overflow:hidden;
+        z-index:99999;
+        pointer-events:none;
+      }
+      .site-header img,.site-footer img{
+        width:100%;
+        height:100%;
+        display:block;
+        object-fit:cover; /* crop to fill same proportions as background */
+        border-radius:0;
+        pointer-events:none;
+        -webkit-user-select:none;
+        user-select:none;
+      }
     </style>
 
 
@@ -50,13 +88,13 @@
 		html,body{height:100%}
 		body {
 			font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-			line-height:1.65;
-			margin:0;
-			color:var(--text);
-			background:transparent;
-			-webkit-font-smoothing:antialiased;
-			padding:12px;
-			position:relative;overflow-x:hidden;
+      line-height:1.65;
+        margin:0;
+        color:var(--text);
+        background:transparent;
+        -webkit-font-smoothing:antialiased;
+        padding:0;
+        position:relative;overflow-x:hidden;
 		}
 
 		/* background image layer from local file (no overlay/filter) */
@@ -146,11 +184,19 @@
 			.event-card .thumb{flex-basis:72px}
 		}
   </style>
+
  </head>
+
  <body>
+
   <div class="wrap">
    <main>
-<img src="./cabeca1.png" alt="Descrição da imagem" class="imagem-responsiva">
+
+         <img src="./cabeca1.png" alt="Descrição da imagem" class="imagem-responsiva">
+
+<h2>    EXPOSIÇÃO, SEMINÁRIO, PERFORMANCES, ATIVAÇÕES, OFICINAS e VIÊNCIAS</h2>
+    
+
 <div id="[sobre]"></div>
  <details class="program-details">
      <summary>      <h2 style="text-align: left;margin:0;">SOBRE</h2></summary>
@@ -158,19 +204,17 @@
      <details class="program-details">
       <summary>
        <h2 style="margin:0">
-        
        </h2>
 
 
     <p style="text-align: left;"> 
-                De <strong>17 SET a 12 OUT</strong>  de 2026, o IACS-UFF (Instituto de Artes e Comunicação 
-                Social da Universidade Federal Fluminense), no Campus Gragoatá, em Niterói, será palco da 4ª edição do <strong>OcupaSoma</strong>.
-                
+                De <strong>17 SET a 12 OUT</strong> acontece a 4ª edição do <strong>OCUPASOMA</strong> no Instituto de Artes e Comunicação 
+                Social da Universidade Federal Fluminense (IACS-UFF) Campus Gragoatá em Niterói.
                 O evento é organizado e produzido pelo Grupo de Pesquisa <strong>SOMA (Som nas Artes)</strong>, que se consolida como um 
                 espaço de encontro e difusão da produção artístico-acadêmica do grupo e de seus parceiros.
                 <br><br>
-                Com uma programação plural e gratuita, o <strong>OcupaSoma</strong> propõe um ambiente imersivo em diferentes formatos: 
-                exposição, performances, ativações, oficinas, vivências e um seminário. As atividades foram pensadas para  
+                Com uma programação plural e gratuita, o <strong>OcupaSoma</strong> terá: 
+                <strong>EXPOSIÇÃO, PERFORMANCES, ATIVAÇÕES, OFICINAS, VIÊNCIAS e SEMINÁRIO.</strong> As atividades foram pensadas para  
                 aproximar o público das práticas sonoras e artísticas contemporâneas que enfatizam criação, 
                 escuta e pensamento crítico. 
                 <br><br>
@@ -1372,7 +1416,7 @@
   <div id="[e]"></div>
   
   <details class="program-details">
-    <summary><h2 style="text-align: center;margin:0;"> OBRAS  </h2></summary>
+    <summary><h2 style="text-align: center;margin:0;"> EXPOSIÇÃO  </h2></summary>
         <div style="padding:12px 16px">
   
   <details class="program-details"><summary><h4 style="text-align: justify;margin:0;"> ALGO VERMELHO | BE DA MATTA GOYTAKÁ | 2026  </h4></summary><div style="padding:12px 16px"> algo vermelho é uma obra que começou com o desejo de trazer a delicadeza do toque, som e manuseio do urucum e foi se desdobrando em um mimetismo-performance com o fruto, que também se transformará em vídeo arte exibida em tela junto com a máscara. </div></details>
@@ -1389,7 +1433,6 @@
   <details class="program-details"><summary><h4 style="text-align: justify;margin:0;"> GÁS LÍGHTÍNG | MALU HATOUM E FILIPE BRITTO (COORD.) | 2025  </h4></summary><div style="padding:12px 16px"> Audiovisual generativo concebido com material coletado da Expedição-oficina a Baia de Guanabara em 2025, que contou com 13 artistes sonoros e visuais do Brasil, Alemanha e Argentina, durante 4 dias de oficina. A partir do material coletado durante a expedição de 8h,  o grupo recorre todo o material gravado, fotos, videos e áudios e decide que cada artista faria a curadoria de seu proprio material a partir de frames e audios de curta duração. Um código python foi escrito para rodar aleatoriamente os arquivos combinados, gerando videos que não se repetem. A expedição percorreu um circuito entre as plataformas de gas e petroleo da Baia de Guanabara e a Ilha de Paquetá no intuito de registrar esse ecossitema ocupado e que sofre com poluição sonora e química, sendo sua degradação silenciada pelas grandes empressas. Artistas e artistes TripulantesBe da Matta Goytaká  Drika Moreno Mari Abreu  Nubia Mobo  Anna Shpak Jella Jess  Camila Millán Philippe Derlien  Bruno C. Hanstenreiter  Anna van Barsen  Felipe Baulini;  Barqueiro Boca. </div></details>
   <details class="program-details"><summary><h4 style="text-align: justify;margin:0;"> GAVETOLÃO DE JANGARANDÁ | GRUPO SONORO DA CASA JANGADA | 2026  </h4></summary><div style="padding:12px 16px"> Depois de sermos atravessados por um vídeo de pessoas tocando umas cordas colocadas sobre árvores emitindo sons análogos a uma harpa, derivamos pelas ruas atrás de um objeto que nos lançasse na aventura de criar um instrumento diferente. Colocamos um aviso na geladeira da Casa: Procura-se gaveta! Ativamos as antenas dos frequentadores e eis que surge um dia uma bela de madeira maciça nos provocando tamanho desafio. Horas a fio entre marteladas, pipocas, vozes, cordas, futebol, bocejos, o som mais antigo do mundo... Não toque  sozinho! </div></details>
   <details class="program-details"><summary><h4 style="text-align: justify;margin:0;"> IWAO CONVIDA OUTRONDE E IMPROVISATORIOS  | HENRIQUE IWAO, RODRIGO GIRAFA E LEO ALVES (COORD.) | 2026  </h4></summary><div style="padding:12px 16px"> Culminância da mini oficina de Henrique Iwao, com convidados especiais para improvisar juntos: o coletivo Outronde, coordenado por Rodrigo Girafa e os Improvisatorios, coordenado por Leo Alves. </div></details>
-  <details class="program-details"><summary><h4 style="text-align: justify;margin:0;"> OFICINA DE CRIAÇÃO COM CAPTADORES PIEZO | GIULIANO OBICI E JOÃO TAVARES | 2026  </h4></summary><div style="padding:12px 16px"> A Oficina de Criação com Captadores Piezo tem por objetivo estudar a tecnologia dos microfones de contato para criação artística, sendo esta uma forma de amplificação de superfícies e microfonagem de contato. Em acordo com Giuliano Obici e vinculada à disciplina Guerrilha Artística com o Celular na Mão, a vivência de aprendizado em arte e tecnologia será aberta ao público externo da Universidade Federal Fluminense. </div></details>
   <details class="program-details"><summary><h4 style="text-align: justify;margin:0;"> PACHA | OZZO UKUMARI E RODRIGO RAMOS  | 2026  </h4></summary><div style="padding:12px 16px"> PACHA (Rodrigo Ramos e ozZo ukumari) Pacha — terra, mundo, território, em quéchua. Pacha é uma obra de arte sonora e escultura em madeira realizada em colaboração entre o artista brasileiro Rodrigo Ramos e o artista boliviano ozZo ukumari. A obra estabelece um diálogo entre matéria, território e vibração. A obra é composta por uma escultura de aproximadamente 1 metro de altura, pertencente à série Levedades, de ozZo ukumari, caracterizada por formas antropomórficas, lânguidas e curvilíneas, instalada sobre uma base de madeira contendo areia boliviana. Rodrigo Ramos desenvolve a composição sonora a partir da frequência fundamental de 7,83 Hz, associada à chamada Frequência de Schumann, e de frequências ressonantes subsequentes: 14,3 Hz, 20,8 Hz, 27,3 Hz e 33,8 Hz. Por meio de transdutores táteis acoplados à estrutura, as frequências são convertidas em vibrações mecânicas e transmitidas à base da escultura, provocando o deslocamento da areia e tornando visualmente perceptível a ação do som sobre a matéria. A obra incorpora a participação direta do público, que pode tocar a escultura e perceber as vibrações por condução tátil. Dessa forma, Pacha propõe uma experiência de escuta expandida, integrando percepção auditiva, visual e corporal.  </div></details>
   <details class="program-details"><summary><h4 style="text-align: justify;margin:0;"> PÉ DO OUVIDO | GABRIEL MARTINHO E GABRIELA SERFATY | 2026  </h4></summary><div style="padding:12px 16px"> Esta instalação nasce durante uma residência de arte sonora. Nesse contexto, vivenciamos uma longa caminhada, inicialmente em silêncio, acompanhados por um travesseiro com suas alças, concebido como um objeto de deslocamento. Nesse gesto, o corpo atravessa o percurso levando consigo sonhos, devaneios e, sobretudo, o sons dos passos com seu próprio ritmo sonoro. O Travesseiro atua como um dispositivo de escuta; ao longo do deslocamento, sua presença reorganiza a percepção sonora, fazendo emergir os sons produzidos pelos passos, bem como os ruídos advindos do esforço e do cansaço corporal. O som que é captado vem das sensações e se torna também paisagem, uma experiência em que a paisagem sonora encontra a fisicalidade do caminhar. Em seguida, rompemos com o silêncio e permitimos que novas palavras surjam do esgotamento. Entramos em um jogo de línguas que emerge do caminhar, onde a gravação não apenas registra mas também transforma nossos corpos cansados. Aos poucos, surgem fragmentos, enunciações, cantorias que passam a compor a obra sonora que agora se torna uma instalação unindo o travesseiro que carregamos e os áudios coletados na experiência. </div></details>
   <details class="program-details"><summary><h4 style="text-align: justify;margin:0;"> PÉ-DE-MAR E BALEIA: CANTO E CONTRACANTO DO FUNDO E DA BEIRA | TATO TABORDA  | 2026  </h4></summary><div style="padding:12px 16px"> A instalação “Pé-de-mar e baleia” é um desdobramento de “Pé-de-mar”, uma instalação sonora na orla do Gragoatá tocada pelo movimento das ondas. Ativa nos períodos de maré cheia e captada em tempo real, suas sonoridades são trazidas ao interior da galeria onde, ao sabor das marés,  convocam vocalizações graves de uma baleia Jubarte gravadas à grande profundidade.  </div></details>
@@ -1412,13 +1455,13 @@
   
   <details class="program-details">
    <summary>
-    <h2 style="text-align: center;margin:0;">
+    <h2 style="text-align: left;margin:0;">
      ARTISTAS
     </h2>
    </summary>
      <div style="padding:12px 16px">  
     
-      <details class="program-details">      <summary><h4 style="text-align: center;margin:0;">ANNA SHPAK, HANNAH NELSEN, LEA BABEL
+      <details class="program-details">      <summary><h4 style="text-align: left;margin:0;">ANNA SHPAK, HANNAH NELSEN, LEA BABEL
       </h4>
       </summary>
       <div style="padding:12px 16px">
@@ -1430,7 +1473,7 @@
     
       <details class="program-details">
       <summary>
-      <h4 style="text-align: center;margin:0;">
+      <h4 style="text-align: left;margin:0;">
         ANNE SANTOS, JOÃO LOURENÇO  
       </h4>
       </summary>
@@ -1444,7 +1487,7 @@
     
        <details class="program-details">
       <summary>
-      <h4 style="text-align: center;margin:0;">
+      <h4 style="text-align: left;margin:0;">
         ATELIÊ ENTREABERTO
       </h4>
       </summary>
@@ -1455,177 +1498,177 @@
       </div>
       </details>
     
-          <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">
+              <details class="program-details">
+          <summary>
+          <h4 style="text-align: left;margin:0;">
             BAÍA BAHIA
-      </h4>
-      </summary>
+          </h4>
+          </summary>
       <div style="padding:12px 16px">
         <p>
       João Tavares e Mirian Alves criaram juntos o duo Baía Bahia, a partir do encontro de suas águas que aconteceu em 2025 no Instituto de Artes e Comunicação Social da Universidade Federal Fluminense, na beira da Baía de Guanabara. O casal reconheceu a origem familiar semelhante que remete as vivências caiçaras de seus ancestrais do litoral do norte da Baía. Assim nasceu Baía Bahia, um projeto cocriado cuja proposta é mergulhar nessa confluência de águas através de trabalhos audiovisuais, música experimental e sound art.    
         </p>
       </div>
       </details>
-     <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">BE DA MATTA GOYTAKÁ	</h4>
-      </summary>
+    <details class="program-details">
+     <summary>
+     <h4 style="text-align: left;margin:0;">BE DA MATTA GOYTAKÁ	</h4>
+     </summary>
       <div style="padding:12px 16px">	Sou artista multilinguagens, pessoa não-binária, Goytaká, bacharel em Artes(UFF) e educador popular pelo MAB - Movimento pelos Atingidos por Barragens. Fui bolsista na monitoria do laboratório de produção musical e investigação cultural e no PIBIC do grupo de práticas artísticas contemporâneas, com uma pesquisa sobre portfólio(2014/2015). Faço graduação em pedagogia na UNILASALLE e mestrado em Estudos Contemporâneos das Artes no PPGCA UFF. Trabalho com educação, curadoria, fotografia, instalação, escultura, performance, intervenções, escrita, fotografia, edição, audiovisual e artes visuais. Fui parte da residência coletiva Ksa do Mato que culminou no filme "Ksa do Mato" de Camila Paola. Laboratório de corpo autogestionado labirinta, que culminou no filme "Labirinta" dir. Isadora Lobo. Filme "Guerrilha da Mata" dir. Clara Chroma.	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">CAMILA MACHADO	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">CAMILA MACHADO	</h4>
+   </summary>
       <div style="padding:12px 16px">	Camila Machado é cineasta especializada em som e fundadora da produtora independente Trotoar, produtora de filmes como “Chão”, “Cadê Edson?” e “Branco Sai, Preto Fica”. Bacharel e Mestre em Comunicação/Cinema pela UnB e especialista em som pela EICTV – Cuba. Atualmente cursa seu doutoramento em Artes Contemporâneas na UFF e faz parte do SOMA, grupo de estudos em Arte Sonora. Idealizou o projeto Sonário do Sertão, apoiado pelo Rumos e premiado pelo IPHAN. Na sua segunda edição, o Sonário tem seu acervo captado em territórios do MST do Distrito Federal.	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">COLECTIVO REFLUXUS Y PAVEL SHALNOV	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">COLECTIVO REFLUXUS Y PAVEL SHALNOV	</h4>
+   </summary>
       <div style="padding:12px 16px">	Colectivo Refluxus é um coletivo de artistes sonoras fundado em 2019 por alunes do mestrado em Arte Sonora na Unviversidade de Barcelona. Hoje é composto por três mulheres de diferente continentes e distintas gerações: Ebe Giovannini, Itália; Malu Haotum, Brasil e Anat Moss, Israel. Nos aproximamos do som como matéria de agência para transformação social através de processos de escuta coletiva e situada. Participamos de Festivais de Rádio e Arte Sonora no mundo, exposições individuais e coletivas em países da América Latina e Europa, Residencias artisticas na comunidade de Piansuola, Italia. Idealizamos e produzimos o Chicharra Festival Nômade de Escuta que teve sua primeira edição em 2023, na maior Reserva Natural da Europa, os Marismas de Doñana, em Almonte, Espanha e a segunda na Zona Maya, México em 2026.	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">FELIPPE MUSSEL	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">FELIPPE MUSSEL	</h4>
+   </summary>
       <div style="padding:12px 16px">	Pesquisador, sonidista e realizador audiovisual. Idealiza e colabora com projetos interdisciplinares — das artes à antropologia, do cinema à saúde mental — em trabalhos que investigam as potências cosmopolíticas da auralidade e tensionam a tradição sensível do Ocidente. Atua na criação de filmes, instalações e peças sonoras, além de desenvolver práticas artísticas em diálogo com comunidades indígenas e grupos periféricos no Brasil, propondo a valorização da oralidade e da escuta como forma de preservação dos saberes ancestrais e na luta por direitos. Realizou sua formação acadêmica na Universidade Federal Fluminense (UFF), com Graduação em Produção Cultural (2008), Mestrado em Cinema e Audiovisual (PPGCine) e Doutorado em Estudos Contemporâneos das Artes (PPGCA). Atuando profissionalmente na captação, edição e desenho de som, trabalhou em mais de 40 filmes brasileiros nos últimos 20 anos. Dirigiu o documentário longa-metragem Em busca de um lugar comum (2013) e o curta-metragem experimental Espectro Restauración (2022).	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">GABRIEL MARTINHO, GABRIELA SERFATY	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">GABRIEL MARTINHO, GABRIELA SERFATY	</h4>
+   </summary>
       <div style="padding:12px 16px">	GABRIEL MARTINHO artista sonoro-visual e esquizoanalista. Integrou projetos internacionais de rádio-arte e cinema. Atualmente, pesquisa a escuta como tecnologia e ato de intervenção, atuando em processos de criação e de subjetivação. GABRIELA SERFATY:  artista, psicanalista e psiquiatra. Realizou a formação de artistas do Parque Lage em 2018. Desde então, tem participado de algumas exposições em instituições brasileiras, sua pesquisa artística parte da escuta para realizar algumas experimentações em performance e arte sonora.	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">GIULIANO OBICI	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">GIULIANO OBICI	</h4>
+   </summary>
       <div style="padding:12px 16px">	Artista-pesquisador em arte sonora e professor adjunto do Departamento de Arte da Universidade Federal Fluminense. Diretor do SomaRumor: Encontro Latino Americano de Arte Sonora e coordenador do grupo de pesquisa SOMA (Som nas Artes). Doutor em Artes pela USP, com bolsa sanduíche do DAAD-CAPES na Technische Universität de Berlim e FAPESP. É mestre em Comunicação e Semiótica (PUC-SP), psicólogo (UEM) e autor do livro "Condição da Escuta". Lecionou na Anhembi Morumbi e ministrou cursos e palestras sobre instalações audiovisuais interativas, luteria digital e software/hardware livre em instituições e festivais internacionais como London University of the Arts, UdK e TU Berlin, Ultima Academy (Oslo) e Medialab Prado (Madri). Recebeu o prêmio Giga-Hertz-Preis do ZKM Karlsruhe / Experimental Studio Freiburg e a Red Bull Residency. Entre seus trabalhos artísticos recentes destacam-se Simulacrum Violão, Screen Utopia, Dissimulation, Simulacrum Piano, Intensidades Brutalistas, Vozes Simulacrum, Laptop Coral, Simulacrum Chamber Orchestra, Concerto para Lan House e Compro Auri.	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">GRIGORY DARMAN	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">GRIGORY DARMAN	</h4>
+   </summary>
       <div style="padding:12px 16px">	GG DEE is the alias of Artist, Producer and DJ Grigory Darman from Düsseldorf Germany. He released music under various aliases and engaged in Sound Art performances, as well as writing and performing Sound Art pieces in the realm of fine arts and collaborating with various Visual Artists. GGDEE is also resident DJ and part of the curatorial team at Salon des Amateurs in Düsseldorf. His productions and live-sets  explore different fields and cross-sections of pop, art and techno music.	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">GRUPO SONORO DA CASA JANGADA	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">GRUPO SONORO DA CASA JANGADA	</h4>
+   </summary>
       <div style="padding:12px 16px">	O Grupo Sonoro faz parte dos dispositivos grupais da Casa Jangada, espaço de criação de várias intersecções entre a Arte, a Clínica e a Rua, localizado no bairro de Botafogo no Rio de Janeiro. Segue ativo desde 2021 com a iniciativa de vivenciar experiências com sonoridades (ruído, barulho, silêncio, pausa, tempo, ritmo, etc) desviando de uma certa organização que constitui o universo da música. Se o som é o que nos mobiliza, então, é a escuta o que nos conecta e nos inclina a criar e ocupar territórios existenciais coletivos em processos clínicos singulares. O Grupo Sonoro participou da 3a Jornada de artes de grupo e práticas de cuidado, produzido pela UFSJ e UFF, com a proposição “Dicionoro”, além de exibir o vídeo “Dicas para pessoas que não são da área” na Mostra Casa Jangada no MAM, no Estação Net Rio, no IV Soma Rumor Encontro Latino Americano de Arte Sonora e na exposição DELIRAR A VIDA / REFAZER O MUNDO no Museu Nacional de Brasília.	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">HENRIQUE IWAO	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">HENRIQUE IWAO	</h4>
+   </summary>
       <div style="padding:12px 16px">	Henrique Iwao é escritor, pesquisador, artista, organizador de eventos e técnico de som, com foco em música experimental, unindo prática e teoria. Mestre pela USP (2012) com pesquisa sobre colagem musical na música eletrônica experimental e doutor pela UFMG (2023), com tese sobre significação musical e a ontologia da arte de Arthur C. Danto. Integrou o Ibrasotope (2007-2013) e atualmente é membro da Seminal Records, organizador do evento de ruído em praça pública Praça 6 (BH) e improvisador residente no Quartas de Improviso. Autor de dois livros"Prosódia Musical, Jogos Etc" (2024, partituras de evento) e "O melhor amigo do rato" (2026, prosa poética). Lançou o álbum "Coleções Digitais" e o projeto "Palavra Palavra", que reordena canções brasileiras em ordem alfabética. Sua discografia está disponível em henriqueiwao.bandcamp.com.	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">IVANI SANTANA	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">IVANI SANTANA	</h4>
+   </summary>
       <div style="padding:12px 16px">	Ivani Santana desenvolve projetos artísticos de dança mediada por tecnologias desde os anos 1990, incluindo espetáculos interativos e imersivos, vídeo-instalações, dança telemática e videodança. Recebeu prêmios como o UNESCO Prize (2006), residência no Chaillot Théâtre national de la Danse (2023), e apoios do IBERESCENA (2012) e edital Cultura Digital (2013). Desde 2019, pesquisa dança com realidades sintéticas (VR, RA, IA), criando obras como ECOS (2021), Entre Seres (2024) e instalações imersivas. Por 15 anos, ensinou metodologias telemáticas a artistas de vários países. É pesquisadora na UFRJ, colabora com a UFBA e integra o MediaLab e o grupo Soma (UFF).	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">JOÃO VICTOR TAVARES DA SILVA	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">JOÃO VICTOR TAVARES DA SILVA	</h4>
+   </summary>
       <div style="padding:12px 16px">	João Victor Tavares da Silva é homem preto, artista, educador e pesquisador com ênfase nas poéticas sonoras. Formou-se em Pedagogia através do ProUni na Universidade Estácio de Sá, atualmente cursa Mestrado em Estudos Contemporâneos das Artes pela Universidade Federal Fluminense. Atuou como bolsista de extensão no programa P.A.L.A.V.R.A com foco em Alfabetização Discursiva. Também atuou como monitor em um projeto de monitoria com ênfase em sonoridades, "As paredes tem ouvidos". Atualmente é bolsista da Capes com a pesquisa em Arte e Tecnologia "Xirê Teóricoprático de ÒgúnGambiarras do ferro na forja ao código na arte sonora", sendo orientado por Giuliano Obici, integrante do grupo de pesquisa SOMMA.	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">LEO ALVES	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">LEO ALVES	</h4>
+   </summary>
       <div style="padding:12px 16px">	Leo Alves é artista sonoro, compositor e professor. Trabalha música escrita, performances e instalações, passando por peças eletroacústicas lançadas em selos de música experimental dentro e fora do Brasil. Já assinou trilhas para teatro e curtas, e também faz ativismo por direitos humanos. Mestre e doutorando pelo Programa de Estudos Contemporâneos das Artes (PPGCA-UFF), vêm pesquisando a improvisação como método ético, estético e pedagógico, e faz parte do grupo SOMA (som nas artes). Também participa da produção do festival brasileiro de música experimental Frestas Telúricas, do Somarumor, festival latino americano de arte sonora e é guitarrista da banda The Lautreamonts. linkhttps://soundcloud.com/leoalvesvieira	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">MALU HATOUM E FILIPE BRITTO	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">MALU HATOUM E FILIPE BRITTO	</h4>
+   </summary>
       <div style="padding:12px 16px">	MALU HATOUM é multiartiste sonora, intérprete vocal, performer, produtora e escritora. Doutorande no programa de Estudos Contemporâneos das Artes na Universidade Federal Fluminense e mestre em Arte Sonora pela Universidade de Barcelona, Espanha. Pós-graduada em Técnica Klauss Vianna na PUC-SP e em Arte Integrativa pela Universidade AnhembiMorumbi-SP. Bacharel em Psicologia, USP. Estudou canto lírico na Fundação das Artes de São Caetano do Sul-SP. Pesquisa processos de escuta e comunicação transespécies tendo como manifestação a voz-corpo. Integra os coletivos SOMA e Colectivo Refluxus, a qual é co-fundadora. Participou em várias exposições coletivas e individuais na Europa e Brasil e teve trabalhos exibidos na África, América Latina e México. Organiza junto ao Colectivo Refluxus o Festival Chicharra Nómada de Escucha e FEstival SomaRumor com o grupo Soma.	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">MARCELA C. TREVISAN </h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">MARCELA C. TREVISAN </h4>
+   </summary>
       <div style="padding:12px 16px">	: Marcela Trevisan é dançarina, atriz, performer e artista-pesquisadora. Doutoranda no Programa de Pós-Graduação em Estudos Contemporâneos das Artes da UFF, Mestra em Artes Cênicas pela UFBA, Bacharel em Artes Cênicas pela UFSC. Integrante do GP Poéticas Tecnológicas: corpoaudiovisual e do Grupo SOMA: Som nas Artes. Atua na área de artes cênicas há mais de 15 anos e entre alguns de seus trabalhos estão a participação como dançarina convidada nos eventos ""Latência Expandida"" no Foro de las Artes (2025) e F(r)esta Festival de Arte Sonora no RJ. Atuação no curta-metragem “Areia” (2023) com direção de Duo Strangloscope, ganhador no Prêmio Conjunto da Obra do MFL do RJ, na performance ""ConferênciAção Poéticas (Des)confinadas"" apresentada na Artech e II EiDCT, e no solo de dança-teatro ""Lamúria"" dentro do FIK 2020. Tem uma parceria artística com o soundesigner Rodrigo Ramos, com trabalhos como a peça sonora ""Strong and Pulsating"" (2021) na Rádio Ressonance FM de Londres. " </div>
       </details>
 
 
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">MARI ABREU	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">MARI ABREU	</h4>
+   </summary>
       <div style="padding:12px 16px">	FILIPE BRITTO é artista e pesquisador. Doutorando em Estudos Contemporâneos das Artes, PPGCA – UFF e formado mestre pelo mesmo programa.Trabalha entre os campos da imagem e da programação algorítmica. Pesquisa dinâmicas coletivas de cuidado com os sonhos, fabulações especulativas, e modelos de linguagem conhecidos como ""inteligências artificiais"".	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">RAFAEL COSTA DE MELO	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">RAFAEL COSTA DE MELO	</h4>
+   </summary>
       <div style="padding:12px 16px">	é mestrando no Programa de Pós-Graduação em Estudos Contemporâneos das Artes da Universidade Federal Fluminense. Possui graduação em Artes pela mesma instituição. É membro do grupo de pesquisa SOMASom nas Artes, no qual investiga as relações entre animação e arte contemporânea. Pesquisa e atua nos seguintes camposanimação enquanto prática artística contemporânea, produção audiovisual com ênfase em cinema de animação, educação, curadoria e práticas de arte pública e colaborativa.	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">RAQUEL STOLF	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">RAQUEL STOLF	</h4>
+   </summary>
       <div style="padding:12px 16px">	Artista e pesquisadora. Suas proposições investigam relações entre processos de escrita, experiências de silêncios e situações de escuta, bem como, o procedimento da coleção (coleciona sons de fins de vácuo, sabonetes de hotel, notícias com animais/vegetais, espécies de silêncios, etc.). Coordena o selo céu da boca, pelo qual vem editando suas proposições e publicações que envolvem desdobramentos em instalações, micro-intervenções, ações, vídeos, fotografias, desenhos e textos. Atua como professora nos cursos de graduação e pós-graduação em Artes Visuais da UDESC. Doutora (2011) e Mestre (2002) em Artes Visuais pela UFRGS, com estágio pós-doutoral (2024) no PPGCA, pela UFF. Coordena o Programa de Extensão Sala de Leitura | Sala de Escuta no DAV/CEART/UDESC e o grupo de pesquisa Proposições artísticas contemporâneas e seus processos experimentais (UDESC/CNPq).	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">OZZO UKUMARI	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">OZZO UKUMARI	</h4>
+   </summary>
       <div style="padding:12px 16px">	OzZo Ukumari – boliviano, mestre em Pesquisa e Produção Artística pela Universidade de Barcelona, com especialização em arte e tecnologia, atualmente vive e trabalha em Santa Cruz de la Sierra. É artista, professor, pesquisador e gestor cultural; Diretor do Festival Sur Aural; Sua prática está ligada às novas mídias, onde desenvolve obras que combinam tecnologia e conhecimentos ancestrais.	" </div>
       </details>
 
        <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">PAUL NEUGEBAUER	</h4>
-      </summary>
+         <summary>
+         <h4 style="text-align: left;margin:0;">PAUL NEUGEBAUER	</h4>
+         </summary>
       <div style="padding:12px 16px">	PAUL NEUGEBAUER (PRÜTI): é físico e artista audiovisual. Formou-se em Física pela Universidade de Leipzig em 2023, onde atualmente atua como pesquisador. Desde 2024, desenvolve uma pesquisa artística própria que une ciência, tecnologia e experimentação audiovisual, explorando práticas como circuit bending, manipulação de vídeo digital e linguagens de programação para criar novas formas de expressão.	" </div>
       </details>
 
 
       <details class="program-details">
       <summary>
-      <h4 style="text-align: center;margin:0;">PEDRO RUBACK DA SILVA	</h4>
+      <h4 style="text-align: left;margin:0;">PEDRO RUBACK DA SILVA	</h4>
       </summary>
       <div style="padding:12px 16px">	Pedro Ruback Da Silva é Mestre em Antropologia e Doutorando em Estudos Contemporâneos das Artes pelo PPGCA-UFF. Sua pesquisa gira em torno de jogos digitais, arte sonora e arte conceitual, antropologia da religião, teoria do conhecimento, magia e esoterismo. Faz parte do grupo de pesquisa Som nas Artes da Universidade Federal Fluminense (SOMA-UFF).	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">RODRIGO GIRAFA	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">RODRIGO GIRAFA	</h4>
+   </summary>
       <div style="padding:12px 16px">	Rodrigo Girafa é um guitarrista, compositor, improvisador e produtor cultural carioca.Ele possui uma sólida formação internacional, sendo Mestre em Guitarra Jazz pelo Conservatorio G. Martucci de Salerno e bacharel pelo Conservatorio G. Verdi de Turim, ambos na Itália. É bastante reconhecido por sua atuação na cena de música experimental, contemporânea e improvisação livre."	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">RODRIGO RAMOS	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">RODRIGO RAMOS	</h4>
+   </summary>
       <div style="padding:12px 16px">	Rodrigo Ramos é um artista multidisciplinar que pesquisa formas de escuta e sonoridades através da arte/tecnologia/meio ambiente. É formado em Cinema pela UFSC, mestre em Artes Visuais (PPGAV) pela UFBA e o doutorando em Sonoridades (PPGCA) na UFF. Trabalha como Artista Sonoro e Sound Designer para Teatro, Dança e Cinema. É criador do projeto Espelho Sonoro, escultura sonora inspirado nos localizadores da Primeira Guerra Mundial, expondo em diversos centros culturais, comoMIS, Oi-Futuro, Farol Santander e Caixa Cultural Brasília; É membro do grupo de pesquisa SOMA (PPGAC -UFF). www.rodosound.com @rodrigo_rodo_ramos	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">SUCO-SULCO	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">SUCO-SULCO	</h4>
+   </summary>
       <div style="padding:12px 16px">	Sala de leitura | Sala de escuta propõe investigações e conversas acerca de publicações de artista, de processos e projetos em arte sonora e de práticas de escrita, bem como, a produção de proposições, peças sonoras e publicações de artista impressas e sonoras, junto ao Departamento de Artes Visuais e PPGAV da UDESC, com parcerias com outras universidades, projetos e grupos de pesquisa. Envolve a realização de três ações (acervo sl-se – arquivo de publicações da sl-se; alguma coisa comentada – ciclo de conversas com convidados/as; ciclo de oficinas com a equipe e convidados/as), sendo coordenado por Raquel Stolf como programa de extensão, desde 2023. O projeto foi proposto por Raquel Stolf e Regina Melim, em 2015, como um espaço experimental no DAV/PPGAV/UDESC, abrigando um acervo de publicações de artista como lugar de pesquisa e difusão, disponibilizado para leitura e escuta. Entre a galeria, o laboratório e a biblioteca, entre espaço para exposições e para a leitura/escuta, o projeto vem transitando em outros contextos, desde a sala de aula, o espaço da publicação ou o espaço radiofônico, entre outras ações e possibilidades de deslocamentos. ProposiçãoRaquel Stolf (coord.), Ariane Oliveira, Claudio Moreira, Djuly Gava, Gabriel Villas, Juliana Silva, Juliano Ventura, Luana Navarro, Sarah Uriarte. Apoios (equipe SomaRumor)Flavia Goa, Pedro Albuquerque. ParticipantesBruno da Silva Casagrande Hanstenreiter; Calû Fernandez; Clarice NillesEliana Gonçalves de Souza; Gabriela NobreLaura Cristina Souza; Luanda; Maria Clara Confort Folz; Marjoly Queiroz de Pinho; Matheus Abel; Nathália Andrião Trotta; Vitória Porto. Projeto gráficoClaudio Moreira e Raquel Stolf. DiagramaçãoClaudio Moreira. Ediçãocéu da boca e editora molécula	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">VERA TERRA	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">VERA TERRA	</h4>
+   </summary>
       <div style="padding:12px 16px">	Pianista, compositora, e ensaísta. Mestre em Artes pelo Programa de Estudos Pós-Graduados em Comunicação e Semiótica da PUC-SP. É autora do livro "Acaso e aleatório na música", publicado pela EDUC/FAPESP no ano 2000. Pesquisadora e intérprete da música de John Cage, participou do concerto *John Cage* na Sala Cecília Meireles, por ocasião  da segunda vinda do compositor ao Brasil, organizado pela compositora Jocy de Oliveira. Publicou, em dezembro de 2019, um ensaio na revista digital DEBATES/UNIRIO, n. 22, sobre o projeto de instalação realizado na cidade de Halberstadt, Alemanha, que expande o conceito de tempo da composição ASLSP¸ inspirada no Finnegans Wake, de James Joyce. Recentemente, vem se dedicando à criação de peças radiofônicas que integram música e literatura. Em 2017, sua composição Devir Alice Mix, fantasia sobre a Suíte para Piano de Brinquedo de John Cage, estreou na Radio Documenta 14, sendo difundida mundialmente pela Rádio MEC-Emissoras EBC. Para a comemoração do Bloomsday, em 16 de junho de 2022, concebeu uma série de quatro podcasts sobre episódios do Ulisses, de James Joyce, atualmente hospedados no site da rádio, na série Especiais Rádio MEC.	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">TATO TABORDA	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">TATO TABORDA	</h4>
+   </summary>
       <div style="padding:12px 16px">	Compositor, intérprete e curador de eventos artísticos dedicados à experimentação musical. Professor e coordenador do curso de Artes e docente do programa de pós-graduação Estudos Contemporâneos das Artes da UFF. Autor de obras como Estratos para orquestra de instrumentos nativos do altiplano andino encomendada pelo festival de Donaueschingen e a ópera A Queda do Céu estreada na Bienal de Munique, tem colaborado  com produções de teatro, dança e cinema nas ultimas três décadas.	" </div>
       </details>
  <details class="program-details">
-      <summary>
-      <h4 style="text-align: center;margin:0;">ZAH (IZABELLA LESSA)	</h4>
-      </summary>
+   <summary>
+   <h4 style="text-align: left;margin:0;">ZAH (IZABELLA LESSA)	</h4>
+   </summary>
       <div style="padding:12px 16px">	Compositora intuitiva, poeta e cantora, Zah é artista natural de Niterói e traz à Nova MPB uma fusão de indie pop, influências regionais e latinas. Desde 2022 lançou singles autorais que dão voz à expressão do feminino e de suas emoções. Já se apresentou no Museu de Arte do Rio, foi participante do Arte Sônica Amplificada e convidada para o projeto Canções do Interior em 2025. Agora em uma nova fase, apresenta seu último trabalho "Tropicaliente".	" </div>
       </details>
     </div>
